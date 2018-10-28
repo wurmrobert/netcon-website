@@ -1,19 +1,36 @@
-const express = require('express');
-const path = require('path');
+var express = require('express'),
+    path = require('path'),
+    fs = require('fs');
 
+var app = express();
+var staticRoot = __dirname + '/dist/easysolutions-website/';
 
-const app = express();
-// Run the app by serving the static files
-// in the dist directory
-app.use(express.static(__dirname + '/dist'));
+app.set('port', (process.env.PORT || 8080));
 
+app.use(express.static(staticRoot));
 
-// For all GET requests, send back index.html
-// so that PathLocationStrategy can be used
-app.get('/*', function (req, res) {
-    res.sendFile(path.join(__dirname + '/dist/easysolutions-website/index.html'));
+app.use(function(req, res, next){
+
+    // if the request is not html then move along
+    var accept = req.accepts('html', 'json', 'xml');
+    if(accept !== 'html') {
+        return next();
+    }
+
+    // if the request has a '.' assume that it's for a file, move along
+    var ext = path.extname(req.path);
+    if (ext !== ''){
+        return next();
+    }
+
+    fs.createReadStream(staticRoot + 'index.html').pipe(res);
+
 });
 
-// Start the app by listening on the default
-// Heroku port
-app.listen(process.env.PORT || 8080);
+//app.all('/*', function(req, res, next) {
+//    res.sendFile('index.html', { root: __dirname + '/' });
+//});
+
+app.listen(app.get('port'), function() {
+    console.log('app running on port', app.get('port'));
+});
