@@ -36,7 +36,8 @@
             "scripts": [
               "node_modules/uikit/dist/js/uikit.min.js",
               "node_modules/uikit/dist/js/uikit-core.min.js",
-              "node_modules/mapbox-gl/dist/mapbox-gl.js"
+              "node_modules/mapbox-gl/dist/mapbox-gl.js",
+              "node_modules/intersection-observer/intersection-observer.js"
             ]
           },
           "configurations": {
