@@ -1,0 +1,63 @@
+
+.consulting-content {
+    min-height: calc(100vh - 546px);
+}
+
+#consulting {
+	margin-top: 80px;
+    margin-bottom: 20px;
+}
+
+#references {
+	margin-top: 50px;
+    margin-bottom: 50px;
+
+    .references-row {
+        margin-top: 50px;
+        margin-bottom: 50px;
+    } 
+    
+}
+
+
+
+
+.entry {
+    
+}
+    
+.entry-title {
+    font-weight: bold !important;
+    margin-top: 30px;
+}
+    
+.entry-text {
+    font-weight: 300 !important;
+    margin-top: 30px;
+}
+    
+ol {
+    list-style-type: circle;
+    font-weight: 300 !important;
+}
+
+.image {
+	background-color: transparent;
+	width: 100%;
+	height: auto;
+	margin-left: auto;
+	margin-right: auto;
+    transition: .5s;
+}
+
+.reference-column {
+    display: grid;
+    a {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    img {
+        width: 220px;
+        
+    }
+}

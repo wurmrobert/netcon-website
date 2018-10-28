@@ -1,0 +1,363 @@
+<div appNavSection id="home" class="home-content">
+
+
+
+  <div class="home-img-content">
+    <img src="assets/home/Home_Screen.png" alt="home screen">
+    <p typingAnimation [typeSpeed]="65" [startDelay]="500" *ngIf="showHeaderText" class="extra-bold">{{headerTexts[currentHeaderIndex]}}</p>
+  </div>
+
+</div>
+
+
+
+<section appNavSection id="services">
+  <div class="uk-container">
+
+
+    <p class="title bold">{{'services.title' | translate}}</p>
+    <hr>
+
+    <div class="section-content uk-child-width-expand@s uk-text-center" uk-grid uk-scrollspy="target: > div; cls:uk-animation-fade; delay: 300">
+
+      <div class="col uk-padding">
+        <img src="assets/home/software_entwicklung.svg" alt="software entwicklung" (click)="navigateTo('services/software-entwicklung')">
+        <p class="service-title semi-bold">{{'services.dev.title' | translate}}</p>
+        <p class="service-subtitle">{{ 'services.dev.subtitle' | translate }}</p>
+      </div>
+
+
+      <div class="col uk-padding">
+        <img src="assets/home/easy_provisioning.svg" alt="easy provisioning" (click)="navigateTo('services/isp-services')">
+        <p class="service-title semi-bold">{{'_general.easyprovisioning' | translate}}</p>
+        <p class="service-subtitle">{{ 'services.isp.subtitle' | translate }}</p>
+      </div>
+
+
+      <div class="col uk-padding">
+        <img src="assets/home/consulting.svg" alt="consulting" (click)="navigateTo('services/consulting')">
+        <p class="service-title semi-bold">{{'services.consulting.title' | translate}}</p>
+        <p class="service-subtitle">{{'services.consulting.subtitle' | translate}}</p>
+      </div>
+
+    </div>
+    <div class="scroll-down-content">
+      <button type="button" class="round-btn orange" [routerLink]="''" [fragment]="'provisioning'">
+        Scroll Down
+      </button>
+
+      <img src="assets/arrow_down.svg" alt="down">
+    </div>
+  </div>
+
+</section>
+
+
+
+<section appNavSection id="provisioning" class="dark">
+  <div class="uk-container">
+    <p class="title bold">{{'_general.easyprovisioning' | translate}}</p>
+    <hr>
+
+    <div class="section-content uk-child-width-expand@s" uk-grid>
+      <div class="col uk-padding">
+        <p class="title extra-bold">{{'services.isp.acs-software' | translate}}</p>
+        <p class="subtitle bold">{{ 'services.isp.side_title' | translate }}</p>
+
+        <p class="descr">
+          {{ 'services.isp.descr1' | translate }}
+          {{ 'services.isp.descr2' | translate }}
+        </p>
+      </div>
+
+      <div class="col uk-padding">
+        <img src="assets/home/provisioning_cloud_white.svg" alt="acs-provisioning">
+      </div>
+    </div>
+
+    <div class="more-content">
+      <button type="button" class="round-btn gray" (click)="navigateTo('services/isp-services')">
+        {{'_general.more' | translate}}
+      </button>
+    </div>
+  </div>
+</section>
+
+
+
+<section appNavSection id="about-us">
+  <div class="uk-container">
+
+
+    <p class="title bold">{{'about_us.title' | translate}}</p>
+    <hr>
+
+
+    <div class="section-content uk-child-width-expand@s" uk-grid>
+      <div class="col img-col">
+        <img src="assets/home/illustration_ueberuns_hands.svg" alt="about-us">
+      </div>
+
+      <div class="col who-we-are uk-text-center">
+        <p class="title extra-bold">{{'about_us.who-we-are' | translate}}</p>
+        <p class="subtitle bold">{{'about_us.who-we-are-subtitle' | translate}}</p>
+
+        <p class="descr">
+          {{'_general.easysolutions' | translate}}
+          {{ 'about_us.company_descr_1' | translate }}
+          {{ 'about_us.company_descr_2' | translate }}
+        </p>
+      </div>
+
+
+    </div>
+
+    <div class="features uk-text-center">
+
+      <div class="uk-child-width-1-2@s uk-child-width-1-3@m" uk-grid uk-scrollspy="target: > div; cls:uk-animation-fade; delay: 300">
+
+        <div class="feature uk-padding uk-text-center">
+          <img src="assets/home/kundenorientiert.svg" alt="kundenorientiert">
+          <p class="feature-title bold">{{ 'about_us.charac.customer_oriented.title' | translate }}</p>
+          <p class="feature-descr">{{'about_us.charac.customer_oriented.descr' | translate}}</p>
+        </div>
+
+
+        <div class="feature uk-padding uk-text-center">
+          <img src="assets/home/flexibel.svg" alt="flexibel">
+          <p class="feature-title bold">{{'about_us.charac.flexible.title' | translate}}</p>
+          <p class="feature-descr">{{'about_us.charac.flexible.descr' | translate}}</p>
+        </div>
+
+
+        <div class="feature uk-padding uk-text-center">
+          <img src="assets/home/qualitativ.svg" alt="qualitativ">
+          <p class="feature-title bold">{{'about_us.charac.quality.title' | translate}}</p>
+          <p class="feature-descr">{{'about_us.charac.quality.descr' | translate}}</p>
+        </div>
+
+
+        <div class="feature uk-padding uk-text-center">
+          <img src="assets/home/spezialisiert.svg" alt="spezialisiert">
+          <p class="feature-title bold">{{'about_us.charac.specialiced.title' | translate}}</p>
+          <p class="feature-descr">{{'about_us.charac.specialiced.descr' | translate}}
+          </p>
+        </div>
+
+
+        <div class="feature uk-padding uk-text-center">
+          <img src="assets/home/stateofart.svg" alt="flexibel">
+          <p class="feature-title bold">{{'about_us.charac.state_of_the_art.title' | translate}}</p>
+          <p class="feature-descr">{{'about_us.charac.state_of_the_art.descr' | translate}}</p>
+        </div>
+
+
+        <div class="feature uk-padding uk-text-center">
+          <img src="assets/home/qualitativ.svg" alt="qualitativ">
+          <p class="feature-title bold">{{'about_us.charac.allround.title' | translate}}</p>
+          <p class="feature-descr">{{'about_us.charac.allround.descr' | translate}}</p>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+
+<section appNavSection id="team" class="dark">
+  <div class="uk-container">
+
+
+    <p class="title bold">{{'about_us.our_team.title' | translate}}</p>
+    <hr>
+
+    <div class="section-content uk-child-width-expand@s" uk-grid (click)="onTeamSectionClicked($event)">
+
+      <div class="col uk-text-center">
+        <img class="hexagon" src="assets/team/mathias_aichinger.png" alt="mathias_aichinger" [class.selected]="currentSkill.name === 'Mathias'"
+          (mouseenter)="showSkillsFor('Mathias')">
+        <div class="vl"></div>
+        <p class="person-title"><span [class.bold]="currentSkill.name === 'Mathias'" [class.active]="currentSkill.name === 'Mathias'">Mathias</span>
+          Aichinger</p>
+        <p class="person-descr">{{'about_us.our_team.mathias_aichinger.job_title' | translate}}</p>
+        <div class="hl"></div>
+      </div>
+
+      <div class="col uk-text-center">
+        <img class="hexagon" src="assets/team/robert_wurm.png" alt="robert_wurm" [class.selected]="currentSkill.name === 'Roberts'"
+          (mouseenter)="showSkillsFor('Roberts')">
+        <div class="vl"></div>
+        <p class="person-title"><span [class.bold]="currentSkill.name === 'Roberts'" [class.active]="currentSkill.name === 'Roberts'">Robert</span>
+          Wurm</p>
+        <p class="person-descr">{{'about_us.our_team.robert_wurm.job_title' | translate}}</p>
+        <div class="hl"></div>
+      </div>
+
+
+      <div class="col uk-text-center">
+        <img class="hexagon" src="assets/team/christian_aichinger.png" alt="christian_aichinger" [class.selected]="currentSkill.name === 'Christians'"
+          (mouseenter)="showSkillsFor('Christians')">
+
+        <div class="vl"></div>
+        <p class="person-title"><span [class.bold]="currentSkill.name === 'Christians'" [class.active]="currentSkill.name === 'Christians'">Christian</span>
+          Aichinger</p>
+        <p class="person-descr">{{'about_us.our_team.christian_aichinger.job_title' | translate}}</p>
+      </div>
+    </div>
+
+    <div class="skills-content uk-container uk-container-xsmall">
+      <p class="skills-title bold"><span [class.isPerson]="currentSkill.isPerson">{{currentSkill.name | translate}}</span> Skills</p>
+
+      <div *ngFor="let skill of currentSkill.value" class="progressBar">
+        <p>{{skill.title | translate}}</p>
+        <div class="progressBarcontent-container">
+          <div class="progressBarValue" [ngClass]="'value-' + skill.value"></div>
+        </div>
+      </div>
+
+
+    </div>
+
+  </div>
+</section>
+
+
+
+<section appNavSection id="partner">
+  <div class="uk-container">
+
+
+    <p class="title bold">{{'_general.references' | translate}}</p>
+    <hr>
+
+    <div uk-slider="autoplay: true">
+
+      <div class="uk-position-relative">
+
+        <div class="uk-slider-container">
+
+          <ul class="uk-slider-items uk-child-width-1-4@m uk-grid">
+            <!-- <li>
+              <img style="margin-top: 72px; 
+              margin-left: 0;
+              height: 40px; 
+              padding-left: 0;
+              padding-right: 0;"
+                src="assets/partners/kabelplus.png" alt="">
+              <div class="uk-position-center uk-panel"></div>
+            </li> -->
+            <!-- <li>
+              <img style="margin-top: 72px;
+              margin-left: 0;
+              height: 38px;
+              padding-left: 0;
+              padding-right: 0;"
+                src="assets/partners/infotech.png" alt="">
+              <div class="uk-position-center uk-panel"></div>
+            </li> -->
+            <li>
+              <img style="margin-top: 60px" src="assets/partners/hall.jpg" alt="">
+              <div class="uk-position-center uk-panel"></div>
+            </li>
+            <li>
+              <img style="margin-top: 20px; height: 145px" src="assets/partners/kufstein.png" alt="">
+              <div class="uk-position-center uk-panel"></div>
+            </li>
+
+            <li>
+              <img style="margin-top: 65px" src="assets/partners/cosys.png" alt="">
+              <div class="uk-position-center uk-panel"></div>
+            </li>
+            <li>
+              <img style="margin-top: 50px" src="assets/partners/feistritzwerke.png" alt="">
+              <div class="uk-position-center uk-panel"></div>
+            </li>
+            <li>
+              <img style="margin-top: 70px;
+                height: 45px;" src="assets/partners/experts.png" alt="">
+              <div class="uk-position-center uk-panel"></div>
+            </li>
+            <!-- <li>
+              <img style="margin-top: 74px; height: 40px;" src="assets/partners/gibsolutions.svg" alt="">
+              <div class="uk-position-center uk-panel"></div>
+            </li> -->
+            <li>
+              <img style="margin-top: 75px; height: 44px;" src="assets/partners/webspeed.png" alt="">
+              <div class="uk-position-center uk-panel"></div>
+            </li>
+            <li>
+              <img style="margin-top: 60px" src="assets/partners/netcon_logo.svg" alt="">
+              <div class="uk-position-center uk-panel"></div>
+            </li>
+            <!-- <li>
+                      <img style="margin-top: 60px; height: 70px" src="assets/partners/avm.png" alt="">
+                      <div class="uk-position-center uk-panel"></div>
+                  </li> -->
+            <li>
+              <img style="margin-top: 60px" src="assets/partners/uni_software_plus.png" alt="">
+              <div class="uk-position-center uk-panel"></div>
+            </li>
+            <!-- <li>
+                      <img style="margin-top: 80px" src="assets/partners/genexis.jpg" alt="">
+                      <div class="uk-position-center uk-panel"></div>
+                  </li> -->
+          </ul>
+
+
+
+        </div>
+
+        <a class="uk-position-center-left-out" href="#" uk-slidenav-previous uk-slider-item="previous"></a>
+        <a class="uk-position-center-right-out" href="#" uk-slidenav-next uk-slider-item="next"></a>
+
+      </div>
+
+
+
+    </div>
+
+
+
+
+  </div>
+</section>
+
+
+
+<section appNavSection id="contact">
+  <div class="uk-container">
+
+    <p class="title bold">{{'contact.title' | translate}}</p>
+    <hr>
+
+    <div class="section-content uk-child-width-expand@s uk-text-center" uk-grid uk-scrollspy="target: > div; cls:uk-animation-fade; delay: 300">
+
+      <div class="col uk-padding contact-content">
+
+        <p class="head-office-title bold">Head Office</p>
+        <div class="office-address">
+          <p>{{'_general.easysolutions' | translate}}</p>
+          <p>{{'contact.company.street' | translate}}</p>
+          <p>{{'contact.company.area' | translate}}</p>
+          <p>{{'contact.company.state' | translate}}</p>
+        </div>
+        <div class="office-contact">
+          <p>{{'contact.company.phone' | translate}}</p>
+          <div style="display: flex"> <p>Mail:</p><a style="margin-left: 5px">{{'contact.company.mail' | translate}}</a></div>
+        </div>
+
+
+
+      </div>
+
+
+      <div class="col">
+
+      </div>
+      <app-company-location-map [height]="'500px'"></app-company-location-map>
+
+    </div>
+  </div>
+</section>

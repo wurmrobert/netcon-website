@@ -1,0 +1,116 @@
+@import 'src/style/colors';
+@import 'src/style/mobile';
+
+#jobs {
+    margin-top: 80px;
+    margin-bottom: 20px;
+    min-height: calc(100vh - 516px);
+}
+
+
+.entry {
+    margin-top: 30px;
+    p {
+        margin: 0;
+        font-weight: light !important;
+    }
+}
+
+
+a {
+    text-decoration: underline;
+}
+
+
+.job-list {    
+    .job-list-title {
+        margin-left: 20%;
+        margin-top: 40px;
+    }
+
+    .job-entry {
+        cursor: pointer;
+        margin-left: auto;
+        margin-right: auto;
+        width: 60%;
+        border: solid  $border-color-light 1px;
+        border-radius: 4px;
+        margin-bottom: 20px;
+
+        &:hover {
+            background-color: $background-color-light-hover;
+        }
+
+        .job-nav-btn {
+            margin-top: -56px;
+        }
+
+        
+        .job-entry-title-content {
+            display: flex;
+            margin-right: 20px;
+
+            .job-entry-title {
+                font-weight: 400;
+                font-size: 26.6667px;
+                font-family: sans-serif;
+                transform: scaleX(1.08511);
+                margin-left: 25px;
+                margin-top: 5px;
+            }
+
+            .job-entry-title-sex {
+                font-weight: 100;
+                margin-top: 17px;
+                margin-left: 20px;
+                font-size: 16px;
+            }
+        }
+
+        &.long {
+            .job-entry-title-content { 
+                .job-entry-title {
+                    margin-left: 33px;
+                    margin-right: 10px;
+                }
+            }
+            
+        }
+        
+
+        .job-entry-sub-title {
+            font-weight: 100;
+            font-size: 16px;
+            font-family: sans-serif;
+            margin-top: -15px;
+            margin-left: 15px;
+        }
+    }
+}
+
+
+
+@media screen and (max-width: $mobile-break-point) { 
+    
+    .job-list {
+        margin-top: 20px;
+
+        .job-list-title {
+            margin-left: 5%;
+            margin-top: 20px;
+        }
+
+        .job-entry {
+            width: 90%;
+
+            .job-entry-title { 
+                margin-left: 27px;
+            }
+        }
+    }
+
+    .back-btn {
+        display: none;
+    }
+
+}

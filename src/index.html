@@ -1,0 +1,204 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>EasySolutions - Software für ISP und TR-069</title>
+  <base href="/">
+
+  <meta name="keywords" content="Enterprise Software, Internet Service Provider, ACS, TR069, TR-069, Auto-configuration and provisioning via TR-069 (CWMP), CWMP, Provisionierung, SNMP Analyse">
+  <meta name="description" content="Vielseitige Softwarelösungen für Internet Service Provider. ACS via TR-069 (CWMP), Provisionierung und Support, Docsis, Monitoring, Kundenverwaltung, ">
+
+  <meta itemprop="thumbnailUrl" content="http://easysol.at/assets/img/EasysolutionsLogo.png?format=1000w">
+  <meta itemprop="name" content="EasySolutions ¡ Enterprise Software For ISP And TR-069 (CWMP)">
+  <meta itemprop="url" content="http://www.easysol.at/">
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="./assets/favicon.png">
+
+  <!-- Global Site Tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-106770894-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments) };
+    gtag('js', new Date());
+
+    gtag('config', 'UA-106770894-1');
+
+  </script>
+
+
+  <script src="https://rawgit.com/web-animations/web-animations-js/master/web-animations.min.js"></script>
+
+  <!-- loading spinner style -->
+  <style>
+    html {
+      padding: 0;
+      margin: 0;
+    }
+
+    body {
+      padding: 0;
+      margin: 0;
+    }
+
+    .loadingPage {
+      position: absolute;
+      min-width: 100%;
+      min-height: 100%;
+      background-color: #ffffff;
+    }
+
+    .loadingTitle {
+      margin: 0;
+      padding: 0;
+      position: absolute;
+      top: 95%;
+      width: 100%;
+      text-align: center;
+      color: rgba(224, 224, 224, 0.1);
+    }
+
+    .spinner-layer {
+      position: absolute;
+      z-index: 999999;
+      width: 100%;
+      height: 100%;
+      background: transparent;
+    }
+
+    .spinner {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 0;
+    }
+
+    .spinner.reversed li {
+      border: 3px solid transparent;
+      animation: LOADINGREV 2s infinite;
+    }
+
+    .spinner.reversed li:nth-child(1n) {
+      animation-delay: 0s;
+    }
+
+    .spinner.reversed li:nth-child(2n) {
+      animation-delay: 0.2s;
+    }
+
+    .spinner.reversed li:nth-child(3n) {
+      animation-delay: 0.4s;
+    }
+
+    .spinner li {
+      height: 0;
+      position: absolute;
+      top: 50%;
+      left: 0;
+      width: 0;
+      margin: 0;
+      height: 10px;
+      width: 10px;
+      border: 3px solid #f8b53b;
+      border-radius: 100%;
+      transform: transformZ(0);
+      animation: LOADING 2s infinite;
+    }
+
+    .spinner li:nth-child(1n) {
+      left: -20px;
+      animation-delay: 0s;
+    }
+
+    .spinner li:nth-child(2n) {
+      left: 0;
+      animation-delay: 0.2s;
+    }
+
+    .spinner li:nth-child(3n) {
+      left: 20px;
+      animation-delay: 0.4s;
+    }
+
+    .grid-row:after {
+      content: '';
+      display: table;
+      clear: both;
+    }
+
+    .grid-row .col {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      width: 50%;
+    }
+
+    .grid-row .col+.col {
+      background: #f8b53b;
+      left: auto;
+      right: 0;
+    }
+
+    @keyframes LOADING {
+      0% {
+        transform: scale(0.5);
+        background: #f8b53b;
+      }
+
+      50% {
+        transform: scale(1);
+        background: transparent;
+      }
+
+      100% {
+        transform: scale(0.5);
+        background: #f8b53b;
+      }
+    }
+
+    @keyframes LOADINGREV {
+      0% {
+        transform: scale(0.5);
+        background: transparent;
+      }
+
+      50% {
+        transform: scale(1);
+        background: #f8b53b;
+      }
+
+      100% {
+        transform: scale(0.5);
+        background: transparent;
+      }
+    }
+  </style>
+
+</head>
+
+
+
+<body>
+  <app-root>
+    <!-- loading page with animated spinner -->
+    <div class="loadingPage">
+      <div class="loadingTitle">EasySolutions GmbH</div>
+      <div class="spinner-layer">
+        <ul class="spinner">
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+      </div>
+    </div>
+  </app-root>
+</body>
+
+</html>

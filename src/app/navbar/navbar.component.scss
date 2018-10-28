@@ -1,0 +1,92 @@
+@import 'src/style/colors';
+
+
+nav {
+    z-index: 10;
+    position: fixed;
+    top: 0;
+    width: 100%;
+
+    background-color: rgba($gray-dark, .8);
+    height: 65px;
+}
+
+
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    padding-top: 10px;
+}
+
+li {
+    cursor: pointer;
+    float: left;
+    padding-top: 5px;
+
+    &.logo {
+        float: right;
+    }
+
+    &.active {
+        a {
+            color: $orange;
+        }
+    }
+
+    &:focus {
+        outline: 0;
+    }
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 5px 16px;
+    text-decoration: none;
+    font-size: 12px;
+}
+
+.tab-icon {
+    height: 15px;
+    margin: auto;
+    display: block;
+}
+
+.logo-img {
+    width: 130px;
+    padding-top: 10px;
+    padding-right: 20px;
+}
+
+
+.sub-nav {
+    a {
+        text-align: left;
+        color: $gray-dark !important;
+    }
+}
+
+
+.languages {
+    position: absolute;
+    right: 20px;
+    top: 2px;
+    
+    .lang-entry {
+        margin-left: 10px !important;
+        font-size: 10px;
+        cursor: pointer;
+        color: white;
+
+        &.active-lang {
+            font-weight: bold;
+            color: $orange;
+        }
+    }
+
+}
+

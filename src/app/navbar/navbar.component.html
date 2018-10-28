@@ -1,0 +1,31 @@
+<nav>
+    <ul role="navigation">
+        <li *ngFor="let tab of tabs" [class.active]="tab.id === activeSection" (click)="onNavigationItemClicked($event, tab)">
+            <img src="{{ tab.id === activeSection ? tab.icon_active : tab.icon }}" class="tab-icon" alt="icon">
+            <a [routerLink]="tab.url" [fragment]="tab.id" class="tab-a">{{ tab.title | translate }}</a>
+
+            <div uk-dropdown="delay-hide: 10" *ngIf="tab.sub" #dropdown>
+                <div class="uk-nav uk-dropdown-nav sub-nav">
+
+                    <ng-container *ngFor="let s of tab.sub">
+                        <a [routerLink]="s.url" (click)="onSubClicked(dropdown)">{{ s.title | translate }}</a>
+                    </ng-container>
+
+                </div>
+            </div>
+
+        </li>
+
+
+        <div class="languages">
+            <li *ngFor="let l of languages" class="lang-entry" (click)="setLanguage(l)" [class.active-lang]="translate.currentLang === l">
+                <p>{{ ('_general.lang.' + l) | translate}}</p>
+            </li>
+        </div>
+
+
+        <li class="logo">
+            <img src="assets/Logo_white.svg" class="logo-img" alt="logo">
+        </li>
+    </ul>
+</nav>

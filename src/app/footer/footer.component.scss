@@ -1,0 +1,78 @@
+@import 'src/style/colors';
+
+
+.footer-content {
+    background-color: $gray-dark;
+    height: 336px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+
+}
+
+div[uk-grid] {
+    width: 100%;
+    text-align: justify;
+    margin-top: 10px;
+
+    a {
+        color: #ffffff;
+    }
+
+    div {
+        font-size: 12px;
+        opacity: 0.7;
+    }
+
+    &.main-header {
+        div {
+            font-size: 16px;
+            opacity: 1;
+        }
+    }
+    
+}
+
+.social-media-content {
+    margin-top: 40px;
+    margin-bottom: 40px;
+
+    padding: 25px;
+    border: solid 1px #ffffff;
+    border-left: none;
+    border-right: none;
+
+    img {
+        height: 32px;
+        &.right {
+            float: right;
+        }
+    }
+
+    .center {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;  
+        width: 90px;
+    }
+}
+
+
+.copyright-content {
+    color: #ffffff;
+    font-size: 12px;
+    margin-top: 20px;
+    opacity: 0.7;
+    
+    p {
+        text-align: center;
+        // line-height: 1px;
+        margin: 0;
+    }    
+}
+
+div {
+    &:focus {
+        outline: none;
+        border: none;
+    }
+}

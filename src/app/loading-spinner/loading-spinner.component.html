@@ -1,0 +1,37 @@
+<div *ngIf="showSpinner && spinnerType == 1" class="loaders">
+  <div class="loader circle-loader-1"></div>
+  <div class="loading-text-container">
+    <p>{{title}}</p>
+  </div>
+</div>
+
+
+<div *ngIf="showSpinner && spinnerType == 2" class="loaders">
+  <div class="three col">
+    <div class="loader loader-2">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+</div>
+
+
+<div *ngIf="showSpinner && spinnerType == 4" class="loaders">
+  <div class="three col">
+    <div class="loader loader-4">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+</div>
+
+
+
+<div *ngIf="showSpinner && spinnerType == 5">
+  <div class="loader-5">
+    <progress></progress>
+  </div>
+  <p class="loading-5-text-container">{{title}}</p>
+</div>

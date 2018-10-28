@@ -1,0 +1,45 @@
+/* You can add global styles to this file, and also import other style files */
+@import 'src/style/fonts';
+@import 'src/style/colors';
+
+
+@import 'src/style/layout';
+
+
+body {
+    margin: 0;
+}
+
+
+.round-btn {
+
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+    padding: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+
+
+    &.orange {
+        background-color: $orange;
+        color: white;
+    }
+
+    &.gray {
+        background-color: $gray-light;
+        color: white;
+    }
+
+}
+
+.typed-cursor {
+    display: none;
+}
+
+
+.mapboxgl-canvas-container.mapboxgl-interactive.mapboxgl-touch-drag-pan.mapboxgl-touch-zoom-rotate {
+    width: 0px;
+}
+
+

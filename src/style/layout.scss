@@ -1,0 +1,93 @@
+
+@import 'src/style/fonts';
+@import 'src/style/colors';
+
+
+body {
+    color: $gray-dark
+}
+
+.uk-h1, .uk-h2, .uk-h3, .uk-h4, .uk-h5, .uk-h6, h1, h2, h3, h4, h5, h6 {
+    color: $gray-dark !important;
+}
+
+
+section {
+    // color: $gray-dark;
+    // color: $gray-light;
+
+    margin-top: 20px;
+    &.dark {
+        color: #ffffff;
+        background-color: $orange;
+
+        hr {
+            color: #ffffff;
+            background-color: #ffffff;
+        }
+    }
+
+
+    &.gray {
+        color: $gray-dark;
+        background-color: $gray-lighter;
+
+        hr {
+            color: $gray-dark;
+            background-color: $gray-dark;
+        }
+    }
+
+    .title {
+        text-align: center;
+        font-size: 20px;
+    }
+
+    hr {
+        max-width: 40px;
+        height: 2px;
+        color: $gray-light;
+        background-color: $gray-light;
+        border: none;
+        margin: auto;
+    }
+
+    .section-content {
+        margin-top: 25px;
+        padding: 25px;
+
+        .title {
+            font-size: 30px;
+        }
+    
+        .subtitle {
+            font-size: 16px;
+            margin-top: -20px;    
+        }
+    
+        .descr {
+            font-size: 12px;
+            font-weight: 100;
+        }
+
+    }
+}
+
+
+.mat-icon-btn {
+    background: transparent;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    &:focus {
+        outline: none;
+        border: none;
+    }
+}
+
+a {
+    &:focus {
+        outline: none;
+        border: none;
+    }
+}

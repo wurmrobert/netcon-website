@@ -1,0 +1,76 @@
+<section id="jobs">
+  <div class="uk-container">
+    <h1>Jobs</h1>
+
+    <div class="row">
+
+
+      <!-- <div class="col-md-12" style="margin-top: 10vh">
+        <div class="entry" style="text-align: center">
+          <p><em>- Zurzeit sind keine offenen Stellen verfügbar.</em></p>
+        </div>
+      </div>
+
+      <div class="col-md-12" style="margin-top: 30px">
+        <div class="entry">
+          <p>Gern können Sie uns trotzdem wissen lassen, wer Sie sind und welcher Einsatzbereich Sie interessiert. Egal ob für eine Fixanstellung oder für einen Praktikumsplatz - wir geben
+            talentierten Bewerbern jederzeite eine Chance.</p>
+        </div>
+      </div>
+
+      <div class="col-md-12">
+          <div class="entry">
+            <p>Schicken Sie uns Ihre Initiativbewerbung an: <a href="mailto:office@easysol.at">office@easysol.at</a> </p>
+          </div>
+        </div> -->
+
+      
+      <div class="job-list" [@visibilityChanged]="jobListVisibility">
+
+        <!-- full time -->
+        <h6 class="job-list-title" >Vollzeit</h6>
+        <div *ngFor="let job of jobsFullTime" class="job-entry" [class.long]="job.title.length > 20" (click)="navigateToJob(job)">
+
+          <div class="job-entry-title-content" >
+            <p class="job-entry-title" >{{job.title}}</p> <p class="job-entry-title-sex">(m/w)</p>
+          </div>
+          
+          <p class="job-entry-sub-title" >{{job.subtitle}}</p>
+
+          <button type="button" class="job-nav-btn pull-right mat-icon-btn"  (click)="navigateToJob(job)">
+              <!-- <mat-icon>keyboard_arrow_right</mat-icon> -->
+              <img src="assets/icons/keyboard_arrow_right.svg" alt="">
+          </button>
+        </div>
+
+
+        <!-- internships -->
+        <h6 class="job-list-title" *ngIf="internships && internships.length > 0" >Praktika</h6>
+        <div *ngFor="let job of internships" class="job-entry" [class.long]="job.title.length > 20" (click)="navigateToJob(job)">
+
+          <div class="job-entry-title-content" >
+            <p class="job-entry-title" >{{job.title}}</p> <p class="job-entry-title-sex">(m/w)</p>
+          </div>
+          <p class="job-entry-sub-title" >{{job.subtitle}}</p>
+
+          <button type="button" class="job-nav-btn pull-right mat-icon-btn" (click)="navigateToJob(job)">
+              <!-- <mat-icon>keyboard_arrow_right</mat-icon> -->
+              <img src="assets/icons/keyboard_arrow_right.svg" alt="">
+          </button>
+        </div>
+
+      </div>
+
+      <div class="detail-container" [@visibilityChanged]="detailViewVisibility">
+
+        
+
+        <router-outlet></router-outlet>
+
+      </div>
+
+
+    </div>
+
+  </div>
+</section>

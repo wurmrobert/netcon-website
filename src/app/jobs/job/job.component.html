@@ -1,0 +1,31 @@
+
+
+<div [@visibilityChanged]="spinnerVisibility">
+  <div class="spinner-content" >
+      <easy-loading-spinner [showSpinner]="true"></easy-loading-spinner>
+  </div>
+</div>
+
+
+<div [@visibilityChanged]="pdfVisibility">
+    <button type="button" class="back-btn mat-icon-btn" (click)="navigateToJobs()"
+      *ngIf="!noAvaliable"
+    >
+        <!-- <mat-icon>arrow_back</mat-icon> -->
+        <img src="assets/icons/back.svg" alt="">
+      </button>
+
+    <pdf-viewer *ngIf="pdfSrc && !noAvaliable"
+      [src]="'/assets/jobs/' + pdfSrc" 
+      [render-text]="true"
+      [fit-to-page]="true"
+      [autoresize]="true"
+      (after-load-complete)="loadCompleted()"
+      (error)="onLoadError()"
+      style="display: block;"></pdf-viewer>
+
+    <div class="not-avaliable" *ngIf="noAvaliable">
+      <p>Sorry - Your Job isn´t avaliable anymore</p>
+    </div>
+</div>
+
