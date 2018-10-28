@@ -23,6 +23,9 @@
 
 #services {
 
+    .section-content {
+        margin-left: 0px;
+    }
 
     .col {
         text-align: center;
@@ -363,6 +366,34 @@
         }
     }
 
+    #services { 
+        .section-content {
+            img {
+                width: 25% !important;
+            }
+        }
+        
+    }
+    #provisioning {
+        .section-content {
+            display: block;
+
+            img {
+                display: block;
+                width: 100%;
+                margin: auto;
+            }
+
+            .cloud-col {
+                //height: 220px;
+                width: 100%;
+            }
+        }
+
+        .more-content {
+            padding-bottom: 20px;
+        }
+    }
 
     #team {
         padding: 40px;

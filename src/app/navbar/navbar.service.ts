@@ -8,8 +8,6 @@ export class NavbarService {
   public readonly onActiveElementChanged = new EventEmitter<ElementRef>();
   public readonly onPageChanged = new EventEmitter<string>();
 
-
-
   private _activeElement: ElementRef;
   private _activePage: string;
 
@@ -34,13 +32,18 @@ export class NavbarService {
 
 
 
-  scrollToHash(hash: string) {
+  scrollToHash(hash: string, animation?: boolean) {
     if (hash) {
       const cmp = document.getElementById(hash);
       if (cmp) {
         // cmp.scrollIntoView({ behavior: 'smooth', block: 'center' });
-        const top = cmp.offsetTop - 140;
-        window.scrollTo({top: top}); // , behavior: 'smooth'
+        const top = cmp.offsetTop - 130;
+
+        if (animation) {
+          window.scrollTo({top: top, behavior: 'smooth'});
+        } else {
+          window.scrollTo({top: top});
+        }
       }
     } else {
       window.scrollTo(0, 0);

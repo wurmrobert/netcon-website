@@ -142,6 +142,9 @@ export class HomeComponent implements OnInit {
     }, 8000);
   }
 
+  get mobileMode(): boolean {
+    return this.displayDetector.getDeviceType() === this.displayType.Phone;
+  }
 
   showSkillsFor(person: string) {
     if (this.displayDetector.getDeviceType() === DisplayType.Phone) {

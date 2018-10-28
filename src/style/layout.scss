@@ -108,6 +108,17 @@ section {
         -webkit-clip-path: polygon(0 15%, 100% 0%, 100% 100%, 0 85%);
         clip-path: polygon(0 15%, 100% 0%, 100% 100%, 0 85%);
     }
+
+
+    &.polygon-XxxX {
+        -webkit-clip-path: polygon(0 0, 100% 30%, 100% 100%, 0 70%);
+        clip-path: polygon(0 0, 100% 30%, 100% 100%, 0 70%);
+    }
+
+    &.polygon-xXXX {
+        -webkit-clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 100%);
+        clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 100%);
+    }
 }
 
 
@@ -148,5 +159,16 @@ section {
             -webkit-clip-path: polygon(0 2%, 100% 0, 100% 100%, 0 98%);
             clip-path: polygon(0 2%, 100% 0, 100% 100%, 0 98%);
         }
+
+        &.polygon-XxxX {
+            -webkit-clip-path: polygon(0 0, 100% 10%, 100% 100%, 0 90%);
+            clip-path: polygon(0 0, 100% 10%, 100% 100%, 0 90%);
+        }
+
+        &.polygon-xXXX {
+            -webkit-clip-path: polygon(0 2%, 100% 0, 100% 100%, 0 100%);
+            clip-path: polygon(0 2%, 100% 0, 100% 100%, 0 100%);
+        }
+
     }
 }

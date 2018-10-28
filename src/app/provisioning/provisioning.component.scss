@@ -1,4 +1,5 @@
 @import 'src/style/colors';
+@import 'src/style/mobile';
 
 .provisioning-content {
     background-color: #ffffff;
@@ -56,8 +57,7 @@
     padding-top: 100px;
     padding-bottom: 100px;
    
-    -webkit-clip-path: polygon(0 0, 100% 30%, 100% 100%, 0 70%);
-    clip-path: polygon(0 0, 100% 30%, 100% 100%, 0 70%);
+    
 
     img {
         padding: 100px;
@@ -75,17 +75,10 @@
 
 
 #provisioning-customer {
-    margin-top: -130px;
-
-
     padding-left: 100px;
     padding-right: 100px;
-    padding-top: 20%;
-    padding-bottom: 10%;    
-
-
-    -webkit-clip-path: polygon(0 30%, 100% 15%, 100% 100%, 0 70%);
-    clip-path: polygon(0 30%, 100% 15%, 100% 100%, 0 70%);
+    padding-top: 5%;
+    padding-bottom: 5%;    
 
 
     .title {
@@ -95,7 +88,7 @@
 
 
 #provisioning-ip {
-    margin-top: -130px;
+    margin-top: -5%;
 
     .title {
         text-align: left;
@@ -103,18 +96,11 @@
 }
 
 #provisioning-monitoring {
-    margin-top: -130px;
-
 
     padding-left: 100px;
     padding-right: 100px;
-    padding-top: 20%;
-    padding-bottom: 10%;    
-
-
-    -webkit-clip-path: polygon(0 30%, 100% 15%, 100% 100%, 0 100%);
-    clip-path: polygon(0 30%, 100% 15%, 100% 100%, 0 100%);
-
+    padding-top: 5%;
+    padding-bottom: 10%;
 
     .title {
         text-align: left;
@@ -220,5 +206,43 @@ section {
     &.parent-showVideo {
         margin-top: 0 !important;
         padding-top: 0 !important;
+    }
+}
+
+
+
+@media screen and (max-width: $mobile-break-point) {  
+    .provisioning-img-content {
+        min-height: 50px;
+    }
+    #provisioning-title {
+        margin-top: 0px;
+        .title {
+            font-size: 25px;
+        }
+
+        .provisioning-subtitle {
+            font-size: 16px;
+            margin-top: 25px;
+        }
+
+        .provisioning-subtext {
+            font-size: 12px;
+        }
+
+        .provisioning-icon {
+            height: 80px;
+        }
+
+        img {
+            margin-top: -25px !important;
+        }
+    }
+
+    #provisioning-overview {
+        padding: 10px;
+        img {
+            padding: 0;
+        }
     }
 }

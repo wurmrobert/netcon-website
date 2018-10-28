@@ -115,7 +115,7 @@ export class NavbarComponent implements OnInit, OnDestroy {
 
   ngOnInit() {
     this.subscriptions.push(this.route.fragment.subscribe((hash: string) => {
-      this.navbarService.scrollToHash(hash);
+      this.navbarService.scrollToHash(hash, true);
     }));
   }
 
@@ -127,10 +127,14 @@ export class NavbarComponent implements OnInit, OnDestroy {
 
   onNavigationItemClicked(event: MouseEvent, tab) {
     this.mobileMenuOpen = false;
+    let animation = false;
     if (!tab.sub || event.srcElement.className === 'tab-icon' || event.srcElement.className === 'tab-a') {
+      animation = this.router.url.split('/').length <= 2;
+      console.log('length: ', this.router.url.split('/').length);
       this.router.navigate([tab.url], { fragment: tab.id});
       if (window.location.hash === `#${tab.id}`) {
-        this.navbarService.scrollToHash(tab.id);
+        console.log('tab: ', tab);
+        this.navbarService.scrollToHash(tab.id, false);
       }
     }
   }
