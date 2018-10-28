@@ -1,3 +1,4 @@
+import { DisplayDetector, DisplayType } from './../display-detector.service';
 import { NavbarService } from './../navbar/navbar.service';
 import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
@@ -116,9 +117,12 @@ export class HomeComponent implements OnInit {
     isPerson: false
   }
 
+  displayType = DisplayType;
+
   constructor(
     private router: Router,
-    private navbarService: NavbarService
+    private navbarService: NavbarService,
+    public displayDetector: DisplayDetector
   ) {
     this.navbarService.activePage = 'home';
   }
@@ -140,6 +144,9 @@ export class HomeComponent implements OnInit {
 
 
   showSkillsFor(person: string) {
+    if (this.displayDetector.getDeviceType() === DisplayType.Phone) {
+      return;
+    }
     this.currentSkill.name = person;
     this.currentSkill.value = this.skills[person];
     this.currentSkill.isPerson = this.currentSkill.name !== 'Unsere';

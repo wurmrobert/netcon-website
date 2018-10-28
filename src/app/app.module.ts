@@ -1,3 +1,4 @@
+import { DisplayDetector } from './display-detector.service';
 import { NguiInViewModule } from './ngui-in-view/ngui-in-view.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BrowserModule } from '@angular/platform-browser';

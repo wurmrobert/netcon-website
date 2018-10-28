@@ -1,4 +1,5 @@
 @import 'src/style/colors';
+@import 'src/style/mobile';
 
 .home-content {
     background-color: #ffffff;
@@ -64,7 +65,7 @@
 }
 
 
-// https://bennettfeely.com/clippy/
+
 #provisioning {
     // height: -webkit-fill-available;
     // background-repeat: no-repeat, repeat;
@@ -72,9 +73,7 @@
     height: 100%;
     
     padding: 100px 25px 60px;
-    -webkit-clip-path: polygon(0 0, 100% 15%, 100% 85%, 0% 100%);
-    clip-path: polygon(0 0, 100% 15%, 100% 85%, 0% 100%);
-
+    
     .section-content {
         .title {
             text-align: left;
@@ -82,7 +81,6 @@
 
         .descr {
             text-align: justify;
-            font-size: 1.1em;
         }
 
         img {
@@ -134,7 +132,6 @@
 
             .descr {
                 text-align: justify;
-                font-size: 1.1em;
             }
         }
     }
@@ -166,8 +163,6 @@
 
 #team {
     padding: 260px 25px 260px;
-    -webkit-clip-path: polygon(0 15%, 100% 0%, 100% 100%, 0 85%);
-    clip-path: polygon(0 15%, 100% 0%, 100% 100%, 0 85%);
 
     .hexagon {
         position: relative;
@@ -295,13 +290,15 @@
         margin-top: 80px;
 
         ul.uk-slider-items {
-            height: 180px;
+            height: 100px;
+            li {
+                padding-top: 10px;
+                width: 15%;
+            }
         } 
 
         img {
-            padding-left: 15px;
-            padding-right: 15px;
-            height: 60px;
+            padding-right: 40px;
             position: absolute;
             margin: auto;
             
@@ -345,5 +342,74 @@
         right: 0px;
         width: calc(50% - 60px);
         margin-top: -165px;
+    }
+}
+
+
+
+@media screen and (max-width: $mobile-break-point) { 
+
+    .home-img-content {
+        img {
+            width: 100%;
+        }
+        p {
+            width: 200px;
+            margin-left: calc((100vw - 200px) /2);
+            position: absolute;
+            text-align: center;
+            margin-top: -28vw;
+            font-size: 20px;
+        }
+    }
+
+
+    #team {
+        padding: 40px;
+    
+    
+        .vl {
+            display: none;
+        }
+    
+        .hl {
+            display: none;
+        }
+
+        .skills-content {
+            display: none;
+        }
+    
+        .person-title {
+            span.active {
+                color: $gray-light;
+            }
+        }
+    
+    }
+
+
+    #partner {
+        .uk-position-relative {
+            width: 80%;
+            margin-left: 10%;
+
+            // li {
+            //     width: 100px;
+            //     height: auto;
+            // }
+        }
+
+        .uk-slider-container {
+            margin-top: 80px;
+    
+            ul.uk-slider-items {
+                height: 120px;
+                li {
+                    padding-top: 30px;
+                    width: 33%;
+                }
+            }
+        }
     }
 }

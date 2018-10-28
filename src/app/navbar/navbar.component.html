@@ -1,10 +1,10 @@
-<nav>
+<nav [class.mobileMenuOpen]="mobileMenuOpen">
     <ul role="navigation">
         <li *ngFor="let tab of tabs" [class.active]="tab.id === activeSection" (click)="onNavigationItemClicked($event, tab)">
             <img src="{{ tab.id === activeSection ? tab.icon_active : tab.icon }}" class="tab-icon" alt="icon">
             <a [routerLink]="tab.url" [fragment]="tab.id" class="tab-a">{{ tab.title | translate }}</a>
 
-            <div uk-dropdown="delay-hide: 10" *ngIf="tab.sub" #dropdown>
+            <div uk-dropdown="delay-hide: 10" *ngIf="tab.sub && (displayDetector.getDeviceType() === displayType.Desktop)" #dropdown>
                 <div class="uk-nav uk-dropdown-nav sub-nav">
 
                     <ng-container *ngFor="let s of tab.sub">
@@ -29,3 +29,7 @@
         </li>
     </ul>
 </nav>
+
+<div *ngIf="displayDetector.getDeviceType() === displayType.Phone" class="burger" [class.cross]="mobileMenuOpen" (click)="onBurgerMenuBtnClicked()">
+    <span></span>
+</div>

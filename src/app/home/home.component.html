@@ -69,7 +69,7 @@
 
 
 
-<section appNavSection id="provisioning" class="dark">
+<section appNavSection id="provisioning" class="dark polygon-XXxx">
   <div class="uk-container">
     <p class="title bold">{{'_general.easyprovisioning' | translate}}</p>
     <hr>
@@ -197,7 +197,7 @@
 
 
 
-<section appNavSection id="team" class="dark">
+<section appNavSection id="team" class="dark polygon-xxXX">
   <div class="uk-container">
 
 
@@ -302,66 +302,58 @@
                 src="assets/partners/infotech.png" alt="">
               <div class="uk-position-center uk-panel"></div>
             </li> -->
+            
+
             <li>
+              <ngui-in-view>
+                <img *ngIf src="assets/partners/hall.jpg">
+              </ngui-in-view>
+              <div class="uk-position-center uk-panel"></div>
+            </li>
+
+            <!-- <li>
 
               <ngui-in-view>
-                <img *ngIf style="margin-top: 60px" src="assets/partners/hall.jpg">
+                <img *ngIf src="assets/partners/kufstein.png" alt="">
               </ngui-in-view>
 
 
               <div class="uk-position-center uk-panel"></div>
-            </li>
-            <li>
-
-              <ngui-in-view>
-                <img *ngIf style="margin-top: 20px; height: 145px" src="assets/partners/kufstein.png" alt="">
-              </ngui-in-view>
-
-
-              <div class="uk-position-center uk-panel"></div>
-            </li>
+            </li> -->
 
             <li>
               <ngui-in-view>
-                <img style="margin-top: 65px" src="assets/partners/cosys.png" alt="">
+                <img *ngIf src="assets/partners/cosys.png" alt="">
               </ngui-in-view>
 
               <div class="uk-position-center uk-panel"></div>
             </li>
+
             <li>
               <ngui-in-view>
-                <img *ngIf style="margin-top: 50px" src="assets/partners/feistritzwerke.png" alt="">
+                <img *ngIf src="assets/partners/feistritzwerke.png" alt="">
               </ngui-in-view>
 
               <div class="uk-position-center uk-panel"></div>
             </li>
-            <li>
 
+            <li>
               <ngui-in-view>
-                <img *ngIf style="margin-top: 70px;
-                height: 45px;" src="assets/partners/experts.png"
+                <img *ngIf  src="assets/partners/experts.jpg"
                   alt="">
               </ngui-in-view>
-
               <div class="uk-position-center uk-panel"></div>
             </li>
+
             <!-- <li>
               <img style="margin-top: 74px; height: 40px;" src="assets/partners/gibsolutions.svg" alt="">
               <div class="uk-position-center uk-panel"></div>
             </li> -->
-            <li>
+            
+            <li> 
 
               <ngui-in-view>
-                <img *ngIf style="margin-top: 75px; height: 44px;" src="assets/partners/webspeed.png" alt="">
-              </ngui-in-view>
-
-
-              <div class="uk-position-center uk-panel"></div>
-            </li>
-            <li>
-
-              <ngui-in-view>
-                <img *ngIf style="margin-top: 60px" src="assets/partners/netcon_logo.svg" alt="">
+                <img *ngIf src="assets/partners/netcon_logo.svg" alt="">
               </ngui-in-view>
 
 
@@ -375,11 +367,19 @@
 
 
               <ngui-in-view>
-                <img *ngIf style="margin-top: 60px" src="assets/partners/uni_software_plus.png" alt="">
+                <img *ngIf  src="assets/partners/uni_software_plus.png" alt="">
               </ngui-in-view>
 
               <div class="uk-position-center uk-panel"></div>
             </li>
+
+            <li>
+              <ngui-in-view>
+                <img *ngIf src="assets/partners/webspeed.png" alt="">
+              </ngui-in-view>
+              <div class="uk-position-center uk-panel"></div>
+            </li>
+
             <!-- <li>
                       <img style="margin-top: 80px" src="assets/partners/genexis.jpg" alt="">
                       <div class="uk-position-center uk-panel"></div>
@@ -439,7 +439,8 @@
       <div class="col">
 
       </div>
-      <app-company-location-map [height]="'500px'"></app-company-location-map>
+
+      <app-company-location-map *ngIf="displayDetector.getDeviceType() === displayType.Desktop" [height]="'500px'"></app-company-location-map>
 
     </div>
   </div>

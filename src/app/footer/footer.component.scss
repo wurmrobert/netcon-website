@@ -1,5 +1,5 @@
 @import 'src/style/colors';
-
+@import 'src/style/mobile';
 
 .footer-content {
     background-color: $gray-dark;
@@ -74,5 +74,13 @@ div {
     &:focus {
         outline: none;
         border: none;
+    }
+}
+
+
+
+@media screen and (max-width: $mobile-break-point) { 
+    .footer-content { 
+        height: 100%;
     }
 }

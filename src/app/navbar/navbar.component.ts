@@ -1,3 +1,4 @@
+import { DisplayDetector, DisplayType } from './../display-detector.service';
 import { TranslateService } from '@ngx-translate/core';
 import { Subscription } from 'rxjs/Subscription';
 import { NavbarService } from './navbar.service';
@@ -80,6 +81,8 @@ export class NavbarComponent implements OnInit, OnDestroy {
   ];
 
   activeSection = 'home';
+  mobileMenuOpen = false;
+  displayType = DisplayType;
 
   private readonly subscriptions = new Array<Subscription>();
 
@@ -87,7 +90,8 @@ export class NavbarComponent implements OnInit, OnDestroy {
     private route: ActivatedRoute,
     private router: Router,
     public navbarService: NavbarService,
-    public translate: TranslateService
+    public translate: TranslateService,
+    public displayDetector: DisplayDetector
   ) {
     this.subscriptions.push(
       this.navbarService.onActiveElementChanged.subscribe(
@@ -122,6 +126,7 @@ export class NavbarComponent implements OnInit, OnDestroy {
   }
 
   onNavigationItemClicked(event: MouseEvent, tab) {
+    this.mobileMenuOpen = false;
     if (!tab.sub || event.srcElement.className === 'tab-icon' || event.srcElement.className === 'tab-a') {
       this.router.navigate([tab.url], { fragment: tab.id});
       if (window.location.hash === `#${tab.id}`) {
@@ -138,6 +143,10 @@ export class NavbarComponent implements OnInit, OnDestroy {
 
   setLanguage(lang: string) {
     this.translate.use(lang);
+  }
+
+  onBurgerMenuBtnClicked() {
+    this.mobileMenuOpen = !this.mobileMenuOpen;
   }
   
   private onActiveSectionChanged(e: ElementRef) {

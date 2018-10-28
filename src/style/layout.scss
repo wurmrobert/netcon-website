@@ -1,6 +1,8 @@
 
 @import 'src/style/fonts';
 @import 'src/style/colors';
+@import 'src/style/mobile';
+
 
 
 body {
@@ -9,6 +11,24 @@ body {
 
 .uk-h1, .uk-h2, .uk-h3, .uk-h4, .uk-h5, .uk-h6, h1, h2, h3, h4, h5, h6 {
     color: $gray-dark !important;
+}
+
+.mat-icon-btn {
+    background: transparent;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    &:focus {
+        outline: none;
+        border: none;
+    }
+}
+
+a {
+    &:focus {
+        outline: none;
+        border: none;
+    }
 }
 
 
@@ -37,6 +57,8 @@ section {
             background-color: $gray-dark;
         }
     }
+
+
 
     .title {
         text-align: center;
@@ -74,20 +96,57 @@ section {
 }
 
 
-.mat-icon-btn {
-    background: transparent;
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-    &:focus {
-        outline: none;
-        border: none;
+section {
+    // https://bennettfeely.com/clippy/
+    &.polygon-XXxx {
+        -webkit-clip-path: polygon(0 0, 100% 15%, 100% 85%, 0% 100%);
+        clip-path: polygon(0 0, 100% 15%, 100% 85%, 0% 100%);
+    }
+
+
+    &.polygon-xxXX {
+        -webkit-clip-path: polygon(0 15%, 100% 0%, 100% 100%, 0 85%);
+        clip-path: polygon(0 15%, 100% 0%, 100% 100%, 0 85%);
     }
 }
 
-a {
-    &:focus {
-        outline: none;
-        border: none;
+
+
+
+@media screen and (max-width: $mobile-break-point) {
+    section {
+        .title {
+            font-size: 18px;
+        }
+
+        .section-content {
+            margin-top: 25px;
+            padding: 25px;
+    
+            .title {
+                font-size: 18px;
+            }
+        
+            .subtitle {
+                font-size: 14px;
+                margin-top: -20px;    
+            }
+        
+            .descr {
+                font-size: 12px;
+                font-weight: 100;
+            }
+    
+        }
+
+        &.polygon-XXxx {
+            -webkit-clip-path: polygon(0 0, 100% 2%, 100% 98%, 0 100%);
+            clip-path: polygon(0 0, 100% 2%, 100% 98%, 0 100%);
+        }
+
+        &.polygon-xxXX {
+            -webkit-clip-path: polygon(0 2%, 100% 0, 100% 100%, 0 98%);
+            clip-path: polygon(0 2%, 100% 0, 100% 100%, 0 98%);
+        }
     }
 }
