@@ -35,7 +35,7 @@ export class HomeComponent implements OnInit {
       },
       {
         title: 'about_us.our_team.robert_wurm.skills4',
-        value: 30
+        value: 80
       },
       {
         title: 'about_us.our_team.robert_wurm.skills5',

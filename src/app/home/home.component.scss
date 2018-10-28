@@ -86,8 +86,9 @@
         }
 
         img {
-            width: 100%;
-            margin-top: 40px;
+            width: calc(100% - 40px);
+            margin-top: 100px;
+            margin-left: 100px;
         }
     }
     
@@ -121,7 +122,7 @@
 
         .img-col {
             img {
-                max-height: 300px;
+                max-height: 350px;
             }
             
         }
@@ -153,7 +154,7 @@
             }
 
             .feature-descr {
-
+                text-align: justify;
             }
         } 
     }
@@ -320,7 +321,7 @@
     padding-top: 48px;
     padding-bottom: 60px;
     background-color: $gray-lighter;
-    height: 392px;
+    height: 407px;
 
     .contact-content {
         text-align: left;
@@ -332,7 +333,7 @@
 
         .office-address, .office-contact {
             margin-top: 40px;
-            font-size: 12px;
+            font-size: 16px;
         }
         
     }

@@ -15,11 +15,11 @@ body {
 
     cursor: pointer;
     border: none;
-    border-radius: 10px;
+    border-radius: 15px;
     padding: 5px;
     padding-left: 15px;
     padding-right: 15px;
-
+    font-size: 16px;
 
     &.orange {
         background-color: $orange;
