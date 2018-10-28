@@ -40,7 +40,7 @@ export class NavbarService {
       if (cmp) {
         // cmp.scrollIntoView({ behavior: 'smooth', block: 'center' });
         const top = cmp.offsetTop - 140;
-        window.scrollTo({top: top, behavior: 'smooth'});
+        window.scrollTo({top: top}); // , behavior: 'smooth'
       }
     } else {
       window.scrollTo(0, 0);

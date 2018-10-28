@@ -322,6 +322,8 @@
     padding-bottom: 60px;
     background-color: $gray-lighter;
     height: 407px;
+    min-height: 50vh;
+    margin-bottom: 0;
 
     .contact-content {
         text-align: left;
@@ -342,6 +344,6 @@
         position: absolute;
         right: 0px;
         width: calc(50% - 60px);
-        margin-top: -150px;
+        margin-top: -165px;
     }
 }

@@ -5,7 +5,6 @@
 }
 
 
-
 .provisioning-img-content {
     min-height: 600px;
 
@@ -172,6 +171,7 @@ ul.feature-list {
 
 $play-btn-color: $gray-dark;
 .play-btn {
+  background-color: transparent;
   flex: 1 1 auto;
   margin: 10px;
   padding: 10px;
