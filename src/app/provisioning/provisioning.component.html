@@ -2,7 +2,9 @@
 
 
 	<div class="provisioning-img-content">
-		<img src="assets/provisioning/Produkt_Screen.png" alt="EasyProvisioning">
+		<ngui-in-view>
+			<img *ngIf src="assets/provisioning/Produkt_Screen.png" alt="EasyProvisioning">
+		</ngui-in-view>
 	</div>
 
 </div>
@@ -15,7 +17,11 @@
 
 
 		<div class="col uk-padding">
-			<img src="assets/home/easy_provisioning.svg" alt="easy provisioning" class="provisioning-icon">
+			<ngui-in-view>
+				<img *ngIf src="assets/home/easy_provisioning.svg" alt="easy provisioning" class="provisioning-icon">
+			</ngui-in-view>
+
+
 			<p class="provisioning-subtitle extra-bold">{{'services.isp.easyprov.header' | translate}}</p>
 			<p class="provisioning-subtext bold">{{'services.isp.easyprov.subheader' | translate}}</p>
 		</div>
@@ -30,7 +36,9 @@
 <section id="provisioning-overview" class="dark" uk-scrollspy="target: > div; cls:uk-animation-fade; delay: 300">
 	<div class="uk-container">
 		<div class="col uk-padding" uk-scrollspy="target: > img; cls:uk-animation-fade; delay: 300">
-			<img src="assets/home/provisioning_cloud_white.svg" alt="acs-provisioning">
+			<ngui-in-view>
+				<img *ngIf src="assets/home/provisioning_cloud_white.svg" alt="acs-provisioning">
+			</ngui-in-view>
 		</div>
 	</div>
 </section>

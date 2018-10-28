@@ -1,10 +1,12 @@
 <div class="mac-img" uk-lightbox>
-    <a class="uk-button" href="assets/provisioning/screenshots/Provisioning.png" data-caption="Services">
-      <img [src]="images[images_i].src" alt="screenshot" [@visibilityChanged]="images_visible">
-    </a>
-    <ng-container *ngFor="let p of images; let i = index;">
-      <ng-container *ngIf="i !== 0">
-        <a [attr.href]="images[i].src" [attr.data-caption]="images[i].caption | translate"></a>
-      </ng-container>
+  <a class="uk-button" href="assets/provisioning/screenshots/Provisioning.png" data-caption="Services">
+    <ngui-in-view>
+      <img *ngIf [src]="images[images_i].src" alt="screenshot" [@visibilityChanged]="images_visible">
+    </ngui-in-view>
+  </a>
+  <ng-container *ngFor="let p of images; let i = index;">
+    <ng-container *ngIf="i !== 0">
+      <a [attr.href]="images[i].src" [attr.data-caption]="images[i].caption | translate"></a>
     </ng-container>
-  </div>
+  </ng-container>
+</div>
