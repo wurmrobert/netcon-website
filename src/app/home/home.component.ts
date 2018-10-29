@@ -1,14 +1,14 @@
 import { DisplayDetector, DisplayType } from './../display-detector.service';
 import { NavbarService } from './../navbar/navbar.service';
 import { Router } from '@angular/router';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, AfterViewInit } from '@angular/core';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent implements OnInit, AfterViewInit {
 
   showHeaderText = true;
   currentHeaderIndex = 0;
@@ -140,6 +140,17 @@ export class HomeComponent implements OnInit {
       }, 100);
       // console.log('headerTexts: ', this.headerTexts[this.currentHeaderIndex]);
     }, 8000);
+  }
+
+  ngAfterViewInit() {
+    setTimeout(() => {
+      if (window.location.hash) {
+        const hash = window.location.hash.split('#');
+        if (hash.length > 1)  {
+          this.navbarService.scrollToHash(hash[1], true);
+        }
+      }
+    }, 300);
   }
 
   get mobileMode(): boolean {

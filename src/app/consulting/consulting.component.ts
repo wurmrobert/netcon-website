@@ -1,5 +1,5 @@
 import { NavbarService } from './../navbar/navbar.service';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
 
 @Component({
@@ -7,7 +7,7 @@ import { Meta, Title } from '@angular/platform-browser';
   templateUrl: './consulting.component.html',
   styleUrls: ['./consulting.component.scss']
 })
-export class ConsultingComponent implements OnInit {
+export class ConsultingComponent implements OnInit, AfterViewInit {
 
   constructor(private navbarService: NavbarService, meta: Meta, title: Title) {
     title.setTitle('EasySolutions - Consulting');
@@ -17,6 +17,10 @@ export class ConsultingComponent implements OnInit {
 
   ngOnInit() {
     
+  }
+
+  ngAfterViewInit(): void {
+    this.navbarService.scrollToTop();
   }
 
 

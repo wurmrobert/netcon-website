@@ -101,16 +101,34 @@ a {
         }
 
         .job-entry {
-            width: 90%;
+            width: 100%;
+
 
             .job-entry-title { 
                 margin-left: 27px;
+                
             }
+
+            
         }
     }
 
     .back-btn {
         display: none;
+    }
+
+    .job-entry-title {
+        font-size: 18px !important;
+    }
+
+    .job-entry-sub-title {
+        font-size: 12px !important;
+        margin-left: 20px !important;
+    }
+
+    .job-entry-title-sex {
+        font-size: 12px !important;
+        margin-top: 10px !important;
     }
 
 }

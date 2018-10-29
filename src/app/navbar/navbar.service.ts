@@ -37,7 +37,7 @@ export class NavbarService {
       const cmp = document.getElementById(hash);
       if (cmp) {
         // cmp.scrollIntoView({ behavior: 'smooth', block: 'center' });
-        const top = cmp.offsetTop - 20;
+        const top = cmp.offsetTop - 60;
 
         if (animation) {
           window.scrollTo({top: top, behavior: 'smooth'});
@@ -52,7 +52,8 @@ export class NavbarService {
 
 
   scrollToTop() {
-    window.scrollTo(0, 0);
+    // window.scrollTo(0, 0);
+    window.scrollTo({top: 0, behavior: 'instant'});
   }
 
 }

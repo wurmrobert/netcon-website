@@ -69,8 +69,8 @@ export class NguiInViewComponent implements OnInit, OnDestroy {
     if (this.inView$.observers.length)
       return false;
 
-    if (entry.intersectionRatio < 0.8) {
-      let opacity = entry.intersectionRatio * (1/0.8);
+    if (entry.intersectionRatio < 0.4) {
+      let opacity = entry.intersectionRatio * (1/0.4);
       let blur = 20 - Math.floor(entry.intersectionRatio * 10)*4;
       let filter = `blur(${blur}px)`;
       Object.assign(entry.target.style, {opacity, filter});
