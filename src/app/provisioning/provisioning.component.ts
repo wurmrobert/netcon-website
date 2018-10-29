@@ -32,6 +32,9 @@ export class ProvisioningComponent implements OnInit, AfterViewInit {
 
   showProvisioningVideoTabs = false;
   showManagementVideoTabs = false;
+  homeImgLoaded = false;
+
+
   constructor(
     meta: Meta, title: Title,
     private navbarService: NavbarService
@@ -44,6 +47,12 @@ export class ProvisioningComponent implements OnInit, AfterViewInit {
 
   ngAfterViewInit() {
     this.navbarService.scrollToTop();
+  }
+
+  onLoadHomeEnded() {
+    setTimeout(() => {
+      this.homeImgLoaded = true;
+    }, 500);
   }
 
 }

@@ -1,3 +1,4 @@
+import { EasyLoadingSpinnerModule } from './loading-spinner/easy-loading-spinner.module';
 import { DisplayDetector } from './display-detector.service';
 import { NguiInViewModule } from './ngui-in-view/ngui-in-view.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -33,7 +34,8 @@ export function createTranslateLoader(http: HttpClient) {
         deps: [HttpClient]
       }
     }),
-    NguiInViewModule
+    NguiInViewModule,
+    EasyLoadingSpinnerModule
   ],
   declarations: [
     AppComponent,

@@ -5,11 +5,12 @@ import { ProvisioningRouting } from './provisioning.routing';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MacSlideshowComponent } from './mac-slideshow/mac-slideshow.component';
+import { EasyLoadingSpinnerModule } from '../loading-spinner/easy-loading-spinner.module';
 
 @NgModule({
   imports: [
     CommonModule, ProvisioningRouting, TranslateModule,
-    NguiInViewModule
+    NguiInViewModule, EasyLoadingSpinnerModule
   ],
   declarations: [
     ProvisioningComponent,

@@ -118,6 +118,8 @@ export class HomeComponent implements OnInit, AfterViewInit {
   }
 
   displayType = DisplayType;
+  homeImgLoaded = false;
+
 
   constructor(
     private router: Router,
@@ -177,4 +179,13 @@ export class HomeComponent implements OnInit, AfterViewInit {
     this.router.navigateByUrl(url);
   }
 
+  onLoadHomeStarted() {
+    console.log('onLoadHomeStarted');
+  }
+
+  onLoadHomeEnded() {
+    setTimeout(() => {
+      this.homeImgLoaded = true;
+    }, 500);
+  }
 }

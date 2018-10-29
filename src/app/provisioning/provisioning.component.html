@@ -2,15 +2,16 @@
 
 
 	<div class="provisioning-img-content">
-		<ngui-in-view>
-			<img *ngIf src="assets/provisioning/Produkt_Screen.png" alt="EasyProvisioning">
-		</ngui-in-view>
+		<img src="assets/provisioning/Produkt_Screen.png" alt="EasyProvisioning" (load)="onLoadHomeEnded()">
+		<div class="home-img-loader">
+			<easy-loading-spinner [showSpinner]="!homeImgLoaded" [title]="''"></easy-loading-spinner>
+		</div>
 	</div>
 
 </div>
 
 
-<section id="provisioning-title" >
+<section id="provisioning-title">
 
 	<div class="uk-container uk-container-xsmall">
 		<p class="title extra-bold">{{ '_general.easyprovisioning' | translate }}</p>

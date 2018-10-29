@@ -3,10 +3,10 @@
 
 
   <div class="home-img-content">
-    <ngui-in-view>
-      <img *ngIf src="assets/home/Home_Screen.png">
-    </ngui-in-view>
-
+    <img src="assets/home/Home_Screen.png" (load)="onLoadHomeEnded()" >
+    <div class="home-img-loader">
+      <easy-loading-spinner [showSpinner]="!homeImgLoaded" [title]="''" ></easy-loading-spinner>
+    </div>
     <p typingAnimation [typeSpeed]="65" [startDelay]="1000" *ngIf="showHeaderText" class="extra-bold">{{headerTexts[currentHeaderIndex]}}</p>
   </div>
 

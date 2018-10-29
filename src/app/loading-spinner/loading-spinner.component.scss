@@ -31,10 +31,10 @@ $dot-color: $orange;
 /* loader 1 */
 
 .circle-loader-1 {
-  width: 20px;
-  min-width: 20px;
-  height: 20px;
-  min-height: 20px;
+  width: 40px;
+  min-width: 40px;
+  height: 40px;
+  min-height: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -124,10 +124,10 @@ $dot-color: $orange;
   }
 
   25%{
-    -webkit-transform: translateY(-20px);
-    -ms-transform: translateY(-20px);
-    -o-transform: translateY(-20px);
-    transform: translateY(-20px);
+    -webkit-transform: translateY(-40px);
+    -ms-transform: translateY(-40px);
+    -o-transform: translateY(-40px);
+    transform: translateY(-40px);
   }
 }
 

@@ -20,6 +20,12 @@
         margin-top: -28vw;
         font-size: 45px;
     }
+
+    .home-img-loader {
+        position: absolute;
+        top: calc(50vh - 20px);
+        margin-left: calc(50vw - 26px);
+    }
 }
 
 
@@ -214,7 +220,13 @@ section {
 @media screen and (max-width: $mobile-break-point) {  
     .provisioning-img-content {
         min-height: 50px;
+        
     }
+
+    .home-img-loader {
+        top: 80px !important;
+    }
+
     #provisioning-title {
         margin-top: 0px;
         .title {
