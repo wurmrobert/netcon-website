@@ -203,7 +203,7 @@
     <p class="title bold">{{'about_us.our_team.title' | translate}}</p>
     <hr>
 
-    <div class="section-content uk-child-width-expand@s" uk-grid (click)="onTeamSectionClicked($event)">
+    <div class="section-content uk-child-width-expand@s" uk-grid (click)="onTeamSectionClicked($event)" uk-scrollspy="target: > div; cls:uk-animation-fade; delay: 300">
 
       <div class="col uk-text-center">
 
@@ -310,15 +310,12 @@
               <div class="uk-position-center uk-panel"></div>
             </li>
 
-            <!-- <li>
-
+            <li>
               <ngui-in-view>
-                <img *ngIf src="assets/partners/kufstein.png" alt="">
+                <img *ngIf src="assets/partners/kufnet.png" alt="">
               </ngui-in-view>
-
-
               <div class="uk-position-center uk-panel"></div>
-            </li> -->
+            </li>
 
             <li>
               <ngui-in-view>
@@ -328,21 +325,21 @@
               <div class="uk-position-center uk-panel"></div>
             </li>
 
-            <li>
+            <!-- <li>
               <ngui-in-view>
                 <img *ngIf src="assets/partners/feistritzwerke.png" alt="">
               </ngui-in-view>
 
               <div class="uk-position-center uk-panel"></div>
-            </li>
+            </li> -->
 
-            <li>
+            <!-- <li>
               <ngui-in-view>
                 <img *ngIf  src="assets/partners/experts.jpg"
                   alt="">
               </ngui-in-view>
               <div class="uk-position-center uk-panel"></div>
-            </li>
+            </li> -->
 
             <!-- <li>
               <img style="margin-top: 74px; height: 40px;" src="assets/partners/gibsolutions.svg" alt="">
@@ -372,12 +369,12 @@
               <div class="uk-position-center uk-panel"></div>
             </li>
 
-            <li>
+            <!-- <li>
               <ngui-in-view>
                 <img *ngIf src="assets/partners/webspeed.png" alt="">
               </ngui-in-view>
               <div class="uk-position-center uk-panel"></div>
-            </li>
+            </li> -->
 
             <!-- <li>
                       <img style="margin-top: 80px" src="assets/partners/genexis.jpg" alt="">
