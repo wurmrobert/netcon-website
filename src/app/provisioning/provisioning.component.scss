@@ -9,9 +9,6 @@
 .provisioning-img-content {
     min-height: 600px;
 
-    img {
-        width: 100%;
-    }
     p {
         width: 500px;
         margin-left: calc((100vw - 500px) /2);
@@ -19,6 +16,24 @@
         text-align: center;
         margin-top: -28vw;
         font-size: 45px;
+    }
+
+    .home-img-wrapper {
+        width: 100%;
+        height: 0;
+        padding-bottom: #{((970 / 1366) *100%)}; // img is: 1366x970
+        background-color: $gray-lighter;
+        position: relative;
+
+        img {
+            width: 100%;
+            position: absolute;
+            filter: blur(4px);
+
+            &.loaded {
+                filter: blur(0);
+            }
+        }
     }
 
     .home-img-loader {

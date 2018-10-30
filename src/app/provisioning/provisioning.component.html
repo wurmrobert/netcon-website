@@ -2,7 +2,13 @@
 
 
 	<div class="provisioning-img-content">
-		<img src="assets/provisioning/Produkt_Screen.png" alt="EasyProvisioning" (load)="onLoadHomeEnded()">
+
+		<div class="home-img-wrapper">
+			<img src="assets/provisioning/Produkt_Screen.png" alt="EasyProvisioning" (load)="onLoadHomeEnded()"
+				[class.loaded]="homeImgLoaded"
+			>
+		</div>
+
 		<div class="home-img-loader">
 			<easy-loading-spinner [showSpinner]="!homeImgLoaded" [title]="''"></easy-loading-spinner>
 		</div>

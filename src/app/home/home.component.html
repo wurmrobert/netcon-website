@@ -3,9 +3,13 @@
 
 
   <div class="home-img-content">
-    <img src="assets/home/Home_Screen.png" (load)="onLoadHomeEnded()" >
+    <div class="home-img-wrapper">
+      <img src="assets/home/Home_Screen.png" (load)="onLoadHomeEnded()"
+        [class.loaded]="homeImgLoaded"
+      >
+    </div>
     <div class="home-img-loader">
-      <easy-loading-spinner [showSpinner]="!homeImgLoaded" [title]="''" ></easy-loading-spinner>
+      <easy-loading-spinner [showSpinner]="!homeImgLoaded" [title]="''"></easy-loading-spinner>
     </div>
     <p typingAnimation [typeSpeed]="65" [startDelay]="1000" *ngIf="showHeaderText" class="extra-bold">{{headerTexts[currentHeaderIndex]}}</p>
   </div>
@@ -85,7 +89,7 @@
         </p>
       </div>
 
-      <div class="cloud-col" [class.col]="!mobileMode"  [class.uk-padding]="!mobileMode">
+      <div class="cloud-col" [class.col]="!mobileMode" [class.uk-padding]="!mobileMode">
         <ngui-in-view>
           <img *ngIf src="assets/home/provisioning_cloud_white.svg">
         </ngui-in-view>
@@ -301,7 +305,7 @@
                 src="assets/partners/infotech.png" alt="">
               <div class="uk-position-center uk-panel"></div>
             </li> -->
-            
+
 
             <li>
               <ngui-in-view>
@@ -345,8 +349,8 @@
               <img style="margin-top: 74px; height: 40px;" src="assets/partners/gibsolutions.svg" alt="">
               <div class="uk-position-center uk-panel"></div>
             </li> -->
-            
-            <li> 
+
+            <li>
 
               <ngui-in-view>
                 <img *ngIf src="assets/partners/netcon_logo.svg" alt="">
@@ -363,7 +367,7 @@
 
 
               <ngui-in-view>
-                <img *ngIf  src="assets/partners/uni_software_plus.png" alt="">
+                <img *ngIf src="assets/partners/uni_software_plus.png" alt="">
               </ngui-in-view>
 
               <div class="uk-position-center uk-panel"></div>
