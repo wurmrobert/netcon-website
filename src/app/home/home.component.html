@@ -90,7 +90,7 @@
       </div>
 
       <div class="cloud-col" [class.col]="!mobileMode" [class.uk-padding]="!mobileMode">
-        <ngui-in-view>
+        <ngui-in-view class="cloud-img-wrapper">
           <img *ngIf src="assets/home/provisioning_cloud_white.svg">
         </ngui-in-view>
       </div>
@@ -115,7 +115,7 @@
 
     <div class="section-content uk-child-width-expand@s" uk-grid>
       <div class="col img-col">
-        <ngui-in-view>
+        <ngui-in-view class="img-wrapper">
           <img *ngIf src="assets/home/illustration_ueberuns_hands.svg">
         </ngui-in-view>
       </div>
@@ -306,7 +306,15 @@
               <div class="uk-position-center uk-panel"></div>
             </li> -->
 
+            <li>
 
+                <ngui-in-view>
+                  <img *ngIf src="assets/partners/netcon_logo.svg" alt="">
+                </ngui-in-view>
+  
+  
+                <div class="uk-position-center uk-panel"></div>
+              </li>
             <li>
               <ngui-in-view>
                 <img *ngIf src="assets/partners/hall.jpg">
@@ -315,11 +323,12 @@
             </li>
 
             <li>
-              <ngui-in-view>
-                <img *ngIf src="assets/partners/kufnet.png" alt="">
-              </ngui-in-view>
-              <div class="uk-position-center uk-panel"></div>
-            </li>
+                <ngui-in-view>
+                  <img *ngIf src="assets/partners/uni_software_plus.png" alt="">
+                </ngui-in-view>
+  
+                <div class="uk-position-center uk-panel"></div>
+              </li>
 
             <li>
               <ngui-in-view>
@@ -328,6 +337,9 @@
 
               <div class="uk-position-center uk-panel"></div>
             </li>
+
+
+            
 
             <!-- <li>
               <ngui-in-view>
@@ -350,28 +362,19 @@
               <div class="uk-position-center uk-panel"></div>
             </li> -->
 
-            <li>
-
-              <ngui-in-view>
-                <img *ngIf src="assets/partners/netcon_logo.svg" alt="">
-              </ngui-in-view>
-
-
-              <div class="uk-position-center uk-panel"></div>
-            </li>
+            
             <!-- <li>
                       <img style="margin-top: 60px; height: 70px" src="assets/partners/avm.png" alt="">
                       <div class="uk-position-center uk-panel"></div>
                   </li> -->
+            
+
             <li>
-
-
-              <ngui-in-view>
-                <img *ngIf src="assets/partners/uni_software_plus.png" alt="">
-              </ngui-in-view>
-
-              <div class="uk-position-center uk-panel"></div>
-            </li>
+                <ngui-in-view>
+                  <img *ngIf src="assets/partners/kufnet.png" alt="">
+                </ngui-in-view>
+                <div class="uk-position-center uk-panel"></div>
+              </li>
 
             <!-- <li>
               <ngui-in-view>

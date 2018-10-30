@@ -37,7 +37,7 @@ export class NavbarService {
       const cmp = document.getElementById(hash);
       if (cmp) {
         // cmp.scrollIntoView({ behavior: 'smooth', block: 'center' });
-        const top = cmp.offsetTop - 60;
+        const top = cmp.offsetTop - 100;
 
         if (animation) {
           window.scrollTo({top: top, behavior: 'smooth'});

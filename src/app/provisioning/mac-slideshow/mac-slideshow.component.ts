@@ -27,7 +27,7 @@ export class MacSlideshowComponent implements OnInit, OnDestroy {
   images_i = 0;
 
   private interval;
-  private readonly INTERVAL_TIME = 8000;
+  private readonly INTERVAL_TIME = 10000;
   private readonly SHOW_HIDE_TIME = 300;
 
   constructor() { }

@@ -49,6 +49,7 @@
     .section-content {
         margin-left: 0px;
     }
+    
 
     .col {
         text-align: center;
@@ -109,12 +110,25 @@
             text-align: justify;
         }
 
-        img {
+        
+
+        .cloud-img-wrapper {
+            
             width: calc(100% - 40px);
+            height: 0;
             margin-top: 100px;
-            margin-left: 100px;
+            margin-left: 50px;
+            padding-bottom: #{((122 / 300) *100%)};
+            position: relative;
+
+            img {
+                width: 100%;
+                position: absolute;
+            }
         }
     }
+
+    
     
     .more-content {
         button {
@@ -139,14 +153,26 @@
 
     .section-content {
         padding: 50px;
+        padding-bottom: 10px;
 
         .col {
             padding: 50px;
+            padding-bottom: 10px;
         }
 
         .img-col {
-            img {
+   
+            .img-wrapper {
+                width: 100%;
+                height: 0;
+                padding-bottom: #{((150 / 150) *100%)};
+                position: relative;
                 max-height: 350px;
+                img {
+                    width: 100%;
+                    max-height: 350px;
+                    position: absolute;
+                }
             }
             
         }
@@ -165,9 +191,14 @@
 
     .features {
         padding: 50px;
+        padding-top: 0;
+
         .feature {
             padding: 25px;
             text-align: justify;
+            ngui-in-view {
+                height: 48px;
+            }
             img {
                 height: 48px;
             }
@@ -189,7 +220,11 @@
 
 #team {
     padding: 260px 25px 260px;
-
+    
+    ngui-in-view {
+        height: 250px;
+    }
+    
     .hexagon {
         position: relative;
         background: white;
@@ -405,6 +440,11 @@
     #provisioning {
         .section-content {
             display: block;
+
+            .cloud-img-wrapper {
+                width: 100%;
+                margin-left: 0px;
+            }
 
             img {
                 display: block;

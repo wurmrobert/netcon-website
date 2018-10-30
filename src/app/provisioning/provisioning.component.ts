@@ -1,5 +1,5 @@
 import { NavbarService } from './../navbar/navbar.service';
-import { Component, OnInit, AfterViewInit } from '@angular/core';
+import { Component, OnInit, AfterViewInit, ViewChild, ElementRef } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
 
 
@@ -34,6 +34,11 @@ export class ProvisioningComponent implements OnInit, AfterViewInit {
   showManagementVideoTabs = false;
   homeImgLoaded = false;
 
+  @ViewChild('provVideoContent')
+  provVideoContent: ElementRef;
+
+  @ViewChild('managVideoContent')
+  managVideoContent: ElementRef;
 
   constructor(
     meta: Meta, title: Title,
@@ -53,6 +58,20 @@ export class ProvisioningComponent implements OnInit, AfterViewInit {
     setTimeout(() => {
       this.homeImgLoaded = true;
     }, 500);
+  }
+
+  showProvVideoTab() {
+    this.showProvisioningVideoTabs = true;
+    setTimeout(() => {
+        this.provVideoContent.nativeElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }, 300);
+  }
+
+  showManagementVideoTab() {
+    this.showManagementVideoTabs = true;
+    setTimeout(() => {
+        this.managVideoContent.nativeElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }, 300);
   }
 
 }

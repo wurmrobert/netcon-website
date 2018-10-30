@@ -24,12 +24,10 @@
         padding-bottom: #{((970 / 1366) *100%)}; // img is: 1366x970
         background-color: $gray-lighter;
         position: relative;
-
         img {
             width: 100%;
             position: absolute;
             filter: blur(4px);
-
             &.loaded {
                 filter: blur(0);
             }
@@ -78,13 +76,29 @@
     padding-top: 100px;
     padding-bottom: 100px;
    
-    
-
-    img {
+    .col {
         padding: 100px;
-        //background-color: rgba(0,0,0,0.1);
-        background-color: transparent;
     }
+    .cloud-img-wrapper {
+            
+        width: calc(100% - 40px);
+        height: 0;
+        margin-top: 100px;
+        margin-left: 50px;
+        padding-bottom: #{((122 / 300) *100%)};
+        position: relative;
+
+        img {
+            width: 100%;
+            position: absolute;
+        }
+    }
+
+    // img {
+    //     padding: 100px;
+    //     //background-color: rgba(0,0,0,0.1);
+    //     background-color: transparent;
+    // }
 }
 
 #provisioning-provisioning {
@@ -136,8 +150,10 @@
 
 video {
     width: 100%;
-    max-height: 60vh;
+    max-height: 65vh;
+    
 }
+
 
 
 ul.feature-list {

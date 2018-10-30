@@ -4,9 +4,7 @@
 	<div class="provisioning-img-content">
 
 		<div class="home-img-wrapper">
-			<img src="assets/provisioning/Produkt_Screen.png" alt="EasyProvisioning" (load)="onLoadHomeEnded()"
-				[class.loaded]="homeImgLoaded"
-			>
+			<img src="assets/provisioning/Produkt_Screen.png" alt="EasyProvisioning" (load)="onLoadHomeEnded()" [class.loaded]="homeImgLoaded">
 		</div>
 
 		<div class="home-img-loader">
@@ -44,7 +42,9 @@
 	<div class="uk-container">
 		<div class="col uk-padding">
 
-			<img src="assets/home/provisioning_cloud_white.svg" alt="acs-provisioning">
+			<div class="cloud-img-wrapper">
+				<img src="assets/home/provisioning_cloud_white.svg" alt="acs-provisioning">
+			</div>
 
 		</div>
 	</div>
@@ -61,7 +61,7 @@
 
 			<div class="col uk-padding">
 				<app-mac-slideshow [images]="images_provisioning" [startTimeout]="0"></app-mac-slideshow>
-				<button *ngIf="!showProvisioningVideoTabs" (click)="showProvisioningVideoTabs = true" class="play-btn" type="button">
+				<button *ngIf="!showProvisioningVideoTabs" (click)="showProvVideoTab()" class="play-btn" type="button">
 					<img src="assets/icons/play.svg">
 					Play Videos
 				</button>
@@ -89,23 +89,22 @@
 
 	<ng-container *ngIf="showProvisioningVideoTabs">
 
-
 		<ul uk-tab>
-			<li><a href="">{{'services.isp.easyprov.provisioning.internet-service' | translate}}</a></li>
 			<li><a href="">{{'services.isp.easyprov.provisioning.remote-service' | translate}}</a></li>
+			<li><a href="">{{'services.isp.easyprov.provisioning.internet-service' | translate}}</a></li>
 			<li><a href="">{{'services.isp.easyprov.provisioning.bridge-service' | translate}}</a></li>
 			<li><a href="">{{'services.isp.easyprov.provisioning.wlan-service' | translate}}</a></li>
 			<li><a href="">{{'services.isp.easyprov.provisioning.voice-service' | translate}}</a></li>
 		</ul>
-		<ul class="uk-switcher">
+		<ul class="uk-switcher" #provVideoContent>
 			<li>
 				<video controls playsinline uk-video>
-					<source src="/assets/provisioning/videos/Internet Service.mov" type="video/mp4">
+					<source src="/assets/provisioning/videos/Fernzugriff Service.mov" type="video/mp4">
 				</video>
 			</li>
 			<li>
 				<video controls playsinline uk-video>
-					<source src="/assets/provisioning/videos/Fernzugriff Service.mov" type="video/mp4">
+					<source src="/assets/provisioning/videos/Internet Service.mov" type="video/mp4">
 				</video>
 			</li>
 			<li>
@@ -157,7 +156,7 @@
 
 			<div class="col uk-padding">
 				<app-mac-slideshow [images]="images_customer" [startTimeout]="2000"></app-mac-slideshow>
-				<button *ngIf="!showManagementVideoTabs" (click)="showManagementVideoTabs = true" class="play-btn" type="button">
+				<button *ngIf="!showManagementVideoTabs" (click)="showManagementVideoTab()"  class="play-btn" type="button">
 					<img src="assets/icons/play.svg">
 					Play Videos
 				</button>
@@ -177,7 +176,7 @@
 			<li><a href="">{{'services.isp.easyprov.management.locations' | translate}}</a></li>
 			<li><a href="">{{'services.isp.easyprov.management.docs-service' | translate}}</a></li>
 		</ul>
-		<ul class="uk-switcher">
+		<ul class="uk-switcher" #managVideoContent>
 			<li>
 				<video controls playsinline uk-video>
 					<source src="/assets/provisioning/videos/Standorte.mov" type="video/mp4">
