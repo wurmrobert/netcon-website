@@ -15,6 +15,7 @@ export class ProvisioningComponent implements OnInit, AfterViewInit {
     { src: 'assets/provisioning/screenshots/Dashboard.png', caption: 'Dashboard' },
     { src: 'assets/provisioning/screenshots/Provisioning.png', caption: 'Services' },
     { src: 'assets/provisioning/screenshots/Provisioning2.png', caption: 'Services' },
+    { src: 'assets/provisioning/screenshots/ACS-Tasks2.png', caption: 'ACS-Tasks' },
     { src: 'assets/provisioning/screenshots/ACS-Tasks.png', caption: 'ACS-Workflows' },
     { src: 'assets/provisioning/screenshots/ACS-Templating.png', caption: 'ACS-Templating' },
     { src: 'assets/provisioning/screenshots/ACS-Workflows.png', caption: 'ACS-Workflows' },
