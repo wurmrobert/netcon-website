@@ -4,14 +4,13 @@
 
   <div class="home-img-content">
     <div class="home-img-wrapper">
-      <img src="assets/home/Home_Screen.png" (load)="onLoadHomeEnded()"
-        [class.loaded]="homeImgLoaded"
-      >
+      <img src="assets/home/Home_Screen.png" (load)="onLoadHomeEnded()" [class.loaded]="homeImgLoaded">
     </div>
     <div class="home-img-loader">
       <easy-loading-spinner [showSpinner]="!homeImgLoaded" [title]="''"></easy-loading-spinner>
     </div>
-    <p typingAnimation [typeSpeed]="headlineTypeSpeed" [startDelay]="0" *ngIf="showHeaderText" class="extra-bold">{{headerTexts[currentHeaderIndex] | translate}}</p>
+    <p typingAnimation [typeSpeed]="headlineTypeSpeed" [startDelay]="0" *ngIf="showHeaderText" class="extra-bold">{{headerTexts[currentHeaderIndex]
+      | translate}}</p>
   </div>
 
 </div>
@@ -307,39 +306,36 @@
             </li> -->
 
             <li>
-
-                <ngui-in-view>
-                  <img *ngIf src="assets/partners/netcon_logo.svg" alt="">
-                </ngui-in-view>
-  
-  
-                <div class="uk-position-center uk-panel"></div>
-              </li>
-            <li>
+              <ngui-in-view>
+                <img *ngIf src="assets/partners/netcon_logo.svg" alt="">
+              </ngui-in-view>
+              <div class="uk-position-center uk-panel"></div>
+            </li>
+            <!-- <li>
               <ngui-in-view>
                 <img *ngIf src="assets/partners/hall.jpg">
               </ngui-in-view>
               <div class="uk-position-center uk-panel"></div>
+            </li> -->
+
+            <li>
+              <ngui-in-view>
+                <img *ngIf src="assets/partners/uni_software_plus.png" alt="">
+              </ngui-in-view>
+
+              <div class="uk-position-center uk-panel"></div>
             </li>
 
-            <li>
-                <ngui-in-view>
-                  <img *ngIf src="assets/partners/uni_software_plus.png" alt="">
-                </ngui-in-view>
-  
-                <div class="uk-position-center uk-panel"></div>
-              </li>
-
-            <li>
+            <!-- <li>
               <ngui-in-view>
                 <img *ngIf src="assets/partners/cosys.png" alt="">
               </ngui-in-view>
 
               <div class="uk-position-center uk-panel"></div>
-            </li>
+            </li> -->
 
 
-            
+
 
             <!-- <li>
               <ngui-in-view>
@@ -362,19 +358,19 @@
               <div class="uk-position-center uk-panel"></div>
             </li> -->
 
-            
+
             <!-- <li>
                       <img style="margin-top: 60px; height: 70px" src="assets/partners/avm.png" alt="">
                       <div class="uk-position-center uk-panel"></div>
                   </li> -->
-            
 
-            <li>
-                <ngui-in-view>
-                  <img *ngIf src="assets/partners/kufnet.png" alt="">
-                </ngui-in-view>
-                <div class="uk-position-center uk-panel"></div>
-              </li>
+
+            <!-- <li>
+              <ngui-in-view>
+                <img *ngIf src="assets/partners/kufnet.png" alt="">
+              </ngui-in-view>
+              <div class="uk-position-center uk-panel"></div>
+            </li> -->
 
             <!-- <li>
               <ngui-in-view>
