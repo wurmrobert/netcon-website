@@ -172,3 +172,12 @@ section {
 
     }
 }
+
+.uk-tab>*>a {
+    font-weight: 600;
+}
+.uk-tab>.uk-active>a {
+    border-color: $orange !important;
+    border-width: 4px;
+    font-weight: 800;
+}

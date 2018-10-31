@@ -12,18 +12,31 @@ export class ProvisioningComponent implements OnInit, AfterViewInit {
 
 
   images_provisioning = [
-    { src: 'assets/provisioning/screenshots/Provisioning.png', caption: 'Provisioning' },
-    { src: 'assets/provisioning/screenshots/Verwaltung.png', caption: 'Verwaltung' },
-    { src: 'assets/provisioning/screenshots/Provisioning1.png', caption: 'Provisioning' }
+    { src: 'assets/provisioning/screenshots/Dashboard.png', caption: 'Dashboard' },
+    { src: 'assets/provisioning/screenshots/Provisioning.png', caption: 'Services' },
+    { src: 'assets/provisioning/screenshots/Provisioning2.png', caption: 'Services' },
+    { src: 'assets/provisioning/screenshots/ACS-Tasks.png', caption: 'ACS-Workflows' },
+    { src: 'assets/provisioning/screenshots/ACS-Templating.png', caption: 'ACS-Templating' },
+    { src: 'assets/provisioning/screenshots/ACS-Workflows.png', caption: 'ACS-Workflows' },
+    { src: 'assets/provisioning/screenshots/Bootfiles.png', caption: 'Bootfiles' },
+    { src: 'assets/provisioning/screenshots/CPE-Management.png', caption: 'CPE-Management' }
   ];
 
 
   images_customer = [
-    { src: 'assets/provisioning/screenshots/Verwaltung.png', caption: 'Kundenverwaltung' }
+    { src: 'assets/provisioning/screenshots/Locations.png', caption: 'Locations' },
+    { src: 'assets/provisioning/screenshots/API Docs.png', caption: 'API' },
+    { src: 'assets/provisioning/screenshots/Infrastructure.png', caption: 'Infrastruktur' },
+    { src: 'assets/provisioning/screenshots/Customers.png', caption: 'Kundenmanagement' },
+    { src: 'assets/provisioning/screenshots/Dashboard Editor.png', caption: 'Dashboard Editor' },
+
+
   ];
 
   images_ip = [
-    { src: 'assets/provisioning/screenshots/IP-Management.png', caption: 'IP-Management' }
+    { src: 'assets/provisioning/screenshots/IP-Management.png', caption: 'IP-Management' },
+    { src: 'assets/provisioning/screenshots/Assign IP.png', caption: 'Assign IP' },
+    { src: 'assets/provisioning/screenshots/IP-Ranges.png', caption: 'IP-Ranges' }
   ];
 
   images_monitoring = [

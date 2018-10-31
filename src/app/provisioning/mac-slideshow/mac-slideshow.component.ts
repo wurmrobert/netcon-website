@@ -21,10 +21,12 @@ export class MacSlideshowComponent implements OnInit, OnDestroy {
   images: Array<{ src: string, caption: string }>;
 
   @Input()
-  startTimeout = 0; 
+  startTimeout = 0;
 
   images_visible = 'shown';
   images_i = 0;
+  screenImgLoaded = false;
+
 
   private interval;
   private readonly INTERVAL_TIME = 10000;
@@ -33,9 +35,11 @@ export class MacSlideshowComponent implements OnInit, OnDestroy {
   constructor() { }
 
   ngOnInit() {
-    setTimeout(() => {
-      this.startSlideshow();
-    }, this.startTimeout);
+    if (this.images.length > 1) {
+      setTimeout(() => {
+        this.startSlideshow();
+      }, this.startTimeout);
+    }
   }
 
   ngOnDestroy() {
@@ -55,5 +59,9 @@ export class MacSlideshowComponent implements OnInit, OnDestroy {
         this.images_visible = 'shown';
       }, this.SHOW_HIDE_TIME);
     }, this.INTERVAL_TIME);
+  }
+
+  onScreenImgLoaded() {
+    this.screenImgLoaded = true;
   }
 }

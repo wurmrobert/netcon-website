@@ -178,14 +178,17 @@ export class HomeComponent implements OnInit, AfterViewInit {
   }
 
   onLoadHomeEnded() {
-    this.startHeadlineShow();
     setTimeout(() => {
       this.homeImgLoaded = true;
     }, 500);
+
+    setTimeout(() => {
+      this.startHeadlineShow();
+    }, 1000);
   }
 
   private startHeadlineShow() {
-    this.currentHeaderIndex = 1;
+    // this.currentHeaderIndex = 1;
 
     setInterval(() => {
       this.showHeaderText = false;
@@ -198,6 +201,6 @@ export class HomeComponent implements OnInit, AfterViewInit {
         this.showHeaderText = true;
       }, 100);
       // console.log('headerTexts: ', this.headerTexts[this.currentHeaderIndex]);
-    }, 5000);
+    }, 6000);
   }
 }
