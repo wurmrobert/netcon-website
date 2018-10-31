@@ -255,6 +255,10 @@ section {
         min-height: 50px;
     }
 
+    .cloud-img-wrapper {
+        width: calc(100% - 20px);
+    }
+
     .home-img-loader {
         top: 80px !important;
     }
