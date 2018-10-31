@@ -26,8 +26,8 @@ export class ProvisioningComponent implements OnInit, AfterViewInit {
   images_customer = [
     { src: 'assets/provisioning/screenshots/Locations.png', caption: 'Locations' },
     { src: 'assets/provisioning/screenshots/API Docs.png', caption: 'API' },
+    { src: 'assets/provisioning/screenshots/Globale Services.png', caption: 'Global Services' },
     { src: 'assets/provisioning/screenshots/Infrastructure.png', caption: 'Infrastruktur' },
-    { src: 'assets/provisioning/screenshots/Customers.png', caption: 'Kundenmanagement' },
     { src: 'assets/provisioning/screenshots/Dashboard Editor.png', caption: 'Dashboard Editor' },
 
 
