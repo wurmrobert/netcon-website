@@ -11,7 +11,7 @@
     <div class="home-img-loader">
       <easy-loading-spinner [showSpinner]="!homeImgLoaded" [title]="''"></easy-loading-spinner>
     </div>
-    <p typingAnimation [typeSpeed]="65" [startDelay]="1000" *ngIf="showHeaderText" class="extra-bold">{{headerTexts[currentHeaderIndex]}}</p>
+    <p typingAnimation [typeSpeed]="headlineTypeSpeed" [startDelay]="0" *ngIf="showHeaderText" class="extra-bold">{{headerTexts[currentHeaderIndex] | translate}}</p>
   </div>
 
 </div>

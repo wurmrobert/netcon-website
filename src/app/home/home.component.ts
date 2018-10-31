@@ -12,12 +12,13 @@ export class HomeComponent implements OnInit, AfterViewInit {
 
   showHeaderText = true;
   currentHeaderIndex = 0;
+  headlineTypeSpeed = 0;
 
   headerTexts = [
-    'There is always an easy solution',
-    'TR069-ACS Provisionierung',
-    'SNMP Analyse von Endgeräten',
-    'Enterprise Software for ISP'
+    'home.headline1',
+    'home.headline2',
+    'home.headline4',
+    'home.headline3'
   ];
 
   skills = {
@@ -130,18 +131,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
   }
 
   ngOnInit() {
-    setInterval(() => {
-      this.showHeaderText = false;
-      if (this.currentHeaderIndex >= this.headerTexts.length - 1) {
-        this.currentHeaderIndex = 0;
-      } else {
-        this.currentHeaderIndex ++;
-      }
-      setTimeout(() => {
-        this.showHeaderText = true;
-      }, 100);
-      // console.log('headerTexts: ', this.headerTexts[this.currentHeaderIndex]);
-    }, 8000);
+    
   }
 
   ngAfterViewInit() {
@@ -153,6 +143,10 @@ export class HomeComponent implements OnInit, AfterViewInit {
         }
       }
     }, 300);
+
+    setTimeout(() => {
+      this.headlineTypeSpeed = 65;
+    }, 1000);
   }
 
   get mobileMode(): boolean {
@@ -184,8 +178,26 @@ export class HomeComponent implements OnInit, AfterViewInit {
   }
 
   onLoadHomeEnded() {
+    this.startHeadlineShow();
     setTimeout(() => {
       this.homeImgLoaded = true;
     }, 500);
+  }
+
+  private startHeadlineShow() {
+    this.currentHeaderIndex = 1;
+
+    setInterval(() => {
+      this.showHeaderText = false;
+      if (this.currentHeaderIndex >= this.headerTexts.length - 1) {
+        this.currentHeaderIndex = 0;
+      } else {
+        this.currentHeaderIndex ++;
+      }
+      setTimeout(() => {
+        this.showHeaderText = true;
+      }, 100);
+      // console.log('headerTexts: ', this.headerTexts[this.currentHeaderIndex]);
+    }, 5000);
   }
 }

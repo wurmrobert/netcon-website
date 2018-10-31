@@ -1,3 +1,7 @@
+.mac-slideshow-content {
+    margin-top: -17%;
+}
+
 .mac-img {
     background-image: url('/assets/provisioning/Mac_Produktseite.svg');
     background-repeat: no-repeat;
@@ -23,4 +27,14 @@
         padding-right: 2%;
         padding-top: 22%;
     }
+}
+
+
+.fullscreen-btn {
+    float: right;
+    margin-top: -35px;
+    // background: transparent;
+    // border: none;
+    // margin-top: 25px;
+    // margin-left: calc(100% - 40px);
 }

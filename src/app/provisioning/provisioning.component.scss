@@ -43,6 +43,8 @@
 
 
 #provisioning-title {
+    z-index: 1;
+    position: relative;
     margin-top: -130px;
     .title {
         color: $orange;
@@ -251,7 +253,6 @@ section {
 @media screen and (max-width: $mobile-break-point) {  
     .provisioning-img-content {
         min-height: 50px;
-        
     }
 
     .home-img-loader {
@@ -284,6 +285,15 @@ section {
 
     #provisioning-overview {
         padding: 10px;
+
+        .col {
+            padding: 20px;
+        }
+
+        .cloud-img-wrapper {
+            margin: 0;
+        } 
+
         img {
             padding: 0;
         }
