@@ -5,6 +5,9 @@
     background-color: #ffffff;
 }
 
+.descr {
+    text-align: justify;
+}
 
 .provisioning-img-content {
     min-height: 600px;
@@ -199,6 +202,7 @@ $play-btn-color: $gray-dark;
   background-color: transparent;
   flex: 1 1 auto;
   margin: 10px;
+  margin-top: -20px;
   padding: 10px;
   border: 2px solid $play-btn-color;
   text-align: center;
@@ -251,6 +255,10 @@ section {
 
 
 @media screen and (max-width: $mobile-break-point) {  
+    .uk-grid {
+        margin-left: 0px;
+    }
+
     .provisioning-img-content {
         min-height: 50px;
     }
@@ -296,6 +304,7 @@ section {
 
         .cloud-img-wrapper {
             margin: 0;
+            width: 100%;
         } 
 
         img {
@@ -312,7 +321,4 @@ section {
         padding: 0;
     }
 
-    .play-btn {
-        margin-top: 25px;
-    }
 }

@@ -86,12 +86,11 @@ section {
             font-size: 16px;
             margin-top: -20px;    
         }
-    
-        .descr {
-            font-size: 16px;
-            font-weight: 100;
-        }
+    }
 
+    .descr {
+        font-size: 16px;
+        font-weight: 400;
     }
 }
 
@@ -142,12 +141,12 @@ section {
                 font-size: 14px;
                 margin-top: -20px;    
             }
-        
-            .descr {
-                font-size: 12px;
-                font-weight: 100;
-            }
     
+        }
+
+        .descr {
+            font-size: 12px;
+            font-weight: 400;
         }
 
         &.polygon-XXxx {

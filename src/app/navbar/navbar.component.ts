@@ -130,10 +130,12 @@ export class NavbarComponent implements OnInit, OnDestroy {
     let animation = false;
     if (!tab.sub || event.srcElement.className === 'tab-icon' || event.srcElement.className === 'tab-a') {
       animation = this.router.url.split('/').length <= 2;
-      console.log('length: ', this.router.url.split('/').length);
-      this.router.navigate([tab.url], { fragment: tab.id});
+      if (this.displayDetector.getDeviceType() === DisplayType.Phone && tab.id === 'services') {
+        this.router.navigate(['services/isp-services']); // on mobile always to provisioning page
+      } else {
+        this.router.navigate([tab.url], { fragment: tab.id });
+      }
       if (window.location.hash === `#${tab.id}`) {
-        console.log('tab: ', tab);
         this.navbarService.scrollToHash(tab.id, false);
       }
     }
@@ -152,7 +154,7 @@ export class NavbarComponent implements OnInit, OnDestroy {
   onBurgerMenuBtnClicked() {
     this.mobileMenuOpen = !this.mobileMenuOpen;
   }
-  
+
   private onActiveSectionChanged(e: ElementRef) {
     if (e && e.nativeElement) {
       const sectionId = e.nativeElement.id;

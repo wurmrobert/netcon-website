@@ -1,6 +1,7 @@
 import { OnDestroy } from '@angular/core/src/metadata/lifecycle_hooks';
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, ViewChild, ElementRef } from '@angular/core';
 import { trigger, state, transition, animate, style } from '@angular/animations';
+declare var UIkit: any;
 
 @Component({
   selector: 'app-mac-slideshow',
@@ -10,8 +11,8 @@ import { trigger, state, transition, animate, style } from '@angular/animations'
     trigger('visibilityChanged', [
       state('shown', style({ opacity: 1 })),
       state('hidden', style({ opacity: 0 })),
-      transition('shown => hidden', animate('300ms')),
-      transition('hidden => shown', animate('1000ms')),
+      transition('shown => hidden', animate('0ms')),
+      transition('hidden => shown', animate('500ms')),
     ])
   ]
 })
@@ -27,10 +28,12 @@ export class MacSlideshowComponent implements OnInit, OnDestroy {
   images_i = 0;
   screenImgLoaded = false;
 
+  @ViewChild('lightbox')
+  lightbox: ElementRef;
 
   private interval;
   private readonly INTERVAL_TIME = 10000;
-  private readonly SHOW_HIDE_TIME = 300;
+  private readonly SHOW_HIDE_TIME = 100;
 
   constructor() { }
 
@@ -63,5 +66,15 @@ export class MacSlideshowComponent implements OnInit, OnDestroy {
 
   onScreenImgLoaded() {
     this.screenImgLoaded = true;
+  }
+
+  onDotClicked(i: number) {
+    this.images_i = i;
+  }
+
+  openLightbox() {
+    // UIkit.lightboxPanel(this.lightbox.nativeElement).show(this.images_i);
+    clearInterval(this.interval);
+    console.log('lightbox: ', this.lightbox);
   }
 }

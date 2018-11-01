@@ -9,7 +9,7 @@
     <div class="home-img-loader">
       <easy-loading-spinner [showSpinner]="!homeImgLoaded" [title]="''"></easy-loading-spinner>
     </div>
-    <p typingAnimation [typeSpeed]="headlineTypeSpeed" [startDelay]="0" *ngIf="showHeaderText" class="extra-bold">{{headerTexts[currentHeaderIndex]
+    <p typingAnimation [typeSpeed]="headlineTypeSpeed" [startDelay]="0" *ngIf="showHeaderText" class="monserat-extra-bold">{{headerTexts[currentHeaderIndex]
       | translate}}</p>
   </div>
 
@@ -27,9 +27,8 @@
     <div class="section-content uk-child-width-expand@s uk-text-center" uk-grid uk-scrollspy="target: > div; cls:uk-animation-fade; delay: 300">
 
       <div class="col uk-padding">
-        <ngui-in-view>
-          <img *ngIf src="assets/home/software_entwicklung.svg" alt="software entwicklung" (click)="navigateTo('services/software-entwicklung')">
-        </ngui-in-view>
+        <img src="assets/home/software_entwicklung.svg" alt="easy provisioning" (click)="navigateTo('services/isp-services')">
+
 
         <p class="service-title semi-bold">{{'services.dev.title' | translate}}</p>
         <p class="service-subtitle">{{ 'services.dev.subtitle' | translate }}</p>
@@ -37,9 +36,9 @@
 
 
       <div class="col uk-padding">
-        <ngui-in-view>
-          <img *ngIf src="assets/home/easy_provisioning.svg" alt="easy provisioning" (click)="navigateTo('services/isp-services')">
-        </ngui-in-view>
+
+        <img src="assets/home/easy_provisioning.svg" alt="easy provisioning" (click)="navigateTo('services/isp-services')">
+
 
         <p class="service-title semi-bold">{{'_general.easyprovisioning' | translate}}</p>
         <p class="service-subtitle">{{ 'services.isp.subtitle' | translate }}</p>
@@ -47,9 +46,9 @@
 
 
       <div class="col uk-padding">
-        <ngui-in-view>
-          <img *ngIf src="assets/home/consulting.svg" alt="consulting" (click)="navigateTo('services/consulting')">
-        </ngui-in-view>
+        
+        <img  src="assets/home/consulting.svg" alt="consulting" (click)="navigateTo('services/consulting')">
+
 
         <p class="service-title semi-bold">{{'services.consulting.title' | translate}}</p>
         <p class="service-subtitle">{{'services.consulting.subtitle' | translate}}</p>
@@ -61,9 +60,26 @@
         Scroll Down
       </button>
 
-      <ngui-in-view>
+      <!-- <ngui-in-view>
         <img *ngIf src="assets/arrow_down.svg" alt="down">
-      </ngui-in-view>
+      </ngui-in-view> -->
+      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 46.94 26.89">
+        <defs>
+          <style>.cls-1,.cls-3{fill:none;}.cls-2{clip-path:url(#clip-path);}.cls-3{stroke:#fab428;stroke-linecap:round;stroke-linejoin:round;stroke-width:7.35px;}</style>
+          <clipPath id="clip-path" transform="translate(0 0)">
+            <rect class="cls-1" width="46.94" height="26.89" />
+          </clipPath>
+        </defs>
+        <title>arrow_down</title>
+        <g id="Ebene_2" data-name="Ebene 2">
+          <g id="provisioning_Bild" data-name="provisioning Bild">
+            <g class="cls-2">
+              <polyline class="cls-3" points="3.67 3.67 23.47 23.21 43.27 3.67" />
+            </g>
+          </g>
+        </g>
+      </svg>
+
 
     </div>
   </div>
@@ -142,7 +158,7 @@
             <img *ngIf src="assets/home/kundenorientiert.svg">
           </ngui-in-view>
           <p class="feature-title bold">{{ 'about_us.charac.customer_oriented.title' | translate }}</p>
-          <p class="feature-descr">{{'about_us.charac.customer_oriented.descr' | translate}}</p>
+          <p class="feature-descr descr">{{'about_us.charac.customer_oriented.descr' | translate}}</p>
         </div>
 
 
@@ -151,7 +167,7 @@
             <img *ngIf src="assets/home/flexibel.svg">
           </ngui-in-view>
           <p class="feature-title bold">{{'about_us.charac.flexible.title' | translate}}</p>
-          <p class="feature-descr">{{'about_us.charac.flexible.descr' | translate}}</p>
+          <p class="feature-descr descr">{{'about_us.charac.flexible.descr' | translate}}</p>
         </div>
 
 
@@ -160,7 +176,7 @@
             <img *ngIf src="assets/home/qualitativ.svg">
           </ngui-in-view>
           <p class="feature-title bold">{{'about_us.charac.quality.title' | translate}}</p>
-          <p class="feature-descr">{{'about_us.charac.quality.descr' | translate}}</p>
+          <p class="feature-descr descr">{{'about_us.charac.quality.descr' | translate}}</p>
         </div>
 
 
@@ -169,7 +185,7 @@
             <img *ngIf src="assets/home/spezialisiert.svg">
           </ngui-in-view>
           <p class="feature-title bold">{{'about_us.charac.specialiced.title' | translate}}</p>
-          <p class="feature-descr">{{'about_us.charac.specialiced.descr' | translate}}
+          <p class="feature-descr descr">{{'about_us.charac.specialiced.descr' | translate}}
           </p>
         </div>
 
@@ -179,7 +195,7 @@
             <img *ngIf src="assets/home/stateofart.svg">
           </ngui-in-view>
           <p class="feature-title bold">{{'about_us.charac.state_of_the_art.title' | translate}}</p>
-          <p class="feature-descr">{{'about_us.charac.state_of_the_art.descr' | translate}}</p>
+          <p class="feature-descr descr">{{'about_us.charac.state_of_the_art.descr' | translate}}</p>
         </div>
 
 
@@ -188,7 +204,7 @@
             <img *ngIf src="assets/home/vielseitig.svg">
           </ngui-in-view>
           <p class="feature-title bold">{{'about_us.charac.allround.title' | translate}}</p>
-          <p class="feature-descr">{{'about_us.charac.allround.descr' | translate}}</p>
+          <p class="feature-descr descr">{{'about_us.charac.allround.descr' | translate}}</p>
         </div>
 
       </div>
@@ -217,7 +233,7 @@
 
 
         <div class="vl"></div>
-        <p class="person-title"><span [class.bold]="currentSkill.name === 'Mathias'" [class.active]="currentSkill.name === 'Mathias'">Mathias</span>
+        <p class="person-title bold"><span [class.bold]="currentSkill.name === 'Mathias'" [class.active]="currentSkill.name === 'Mathias'">Mathias</span>
           Aichinger</p>
         <p class="person-descr">{{'about_us.our_team.mathias_aichinger.job_title' | translate}}</p>
         <div class="hl"></div>
@@ -231,7 +247,7 @@
         </ngui-in-view>
 
         <div class="vl"></div>
-        <p class="person-title"><span [class.bold]="currentSkill.name === 'Roberts'" [class.active]="currentSkill.name === 'Roberts'">Robert</span>
+        <p class="person-title bold"><span [class.bold]="currentSkill.name === 'Roberts'" [class.active]="currentSkill.name === 'Roberts'">Robert</span>
           Wurm</p>
         <p class="person-descr">{{'about_us.our_team.robert_wurm.job_title' | translate}}</p>
         <div class="hl"></div>
@@ -247,7 +263,7 @@
         </ngui-in-view>
 
         <div class="vl"></div>
-        <p class="person-title"><span [class.bold]="currentSkill.name === 'Christians'" [class.active]="currentSkill.name === 'Christians'">Christian</span>
+        <p class="person-title bold"><span [class.bold]="currentSkill.name === 'Christians'" [class.active]="currentSkill.name === 'Christians'">Christian</span>
           Aichinger</p>
         <p class="person-descr">{{'about_us.our_team.christian_aichinger.job_title' | translate}}</p>
       </div>

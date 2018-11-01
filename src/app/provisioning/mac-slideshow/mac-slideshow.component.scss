@@ -32,23 +32,37 @@
         padding-top: 22%;
         margin-top: 4px;
     }
+
+    
 }
+
 
 
 .fullscreen-btn {
     float: right;
-    margin-top: -40px !important;
+    margin-top: -35px !important;
+    z-index: 100 !important;
     // background: transparent;
     // border: none;
     // margin-top: 25px;
     // margin-left: calc(100% - 40px);
+
+
+    margin-left: calc(100% - 20px);
+    padding-top: 115px;
+    padding-bottom: 0px;
+    position: absolute !important;
+    right: -10px;
 }
 
 
 .image-dots {
     display: -webkit-inline-box;
     margin-top: 30%;
-    margin-left: 45px;
+    margin-left: 0px;
+    cursor: pointer;
+
+    float: right;
 
     .img-dot {
         width: 10px;
@@ -68,5 +82,11 @@
 @media screen and (max-width: $mobile-break-point) {  
     .fullscreen-btn {
         margin-top: -20px !important;
+    }
+
+    .mac-img {
+        img {
+            margin-top: 3px;
+        }
     }
 }

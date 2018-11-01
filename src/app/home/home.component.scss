@@ -56,12 +56,12 @@
         cursor: pointer;
 
         &:hover {
-            img {
+            img, svg {
                 transform: scale(1.2);
             }
         }
 
-        img {
+        img, svg {
             width: 35%;
             margin: auto;
             display: block;
@@ -82,7 +82,7 @@
                 outline: 0;
             }
         }
-        img {
+        img, svg {
             width: 40px;
             margin: auto;
             display: block;
@@ -256,6 +256,7 @@
         margin: auto;
         display: block;
         width: 0px;
+        margin-top: -5px;
     }
 
     .hl {
@@ -379,7 +380,7 @@
     padding-top: 48px;
     padding-bottom: 60px;
     background-color: $gray-lighter;
-    height: 399px;
+    height: 393px;
     min-height: 50vh;
     margin-bottom: 0;
 
@@ -431,7 +432,8 @@
 
     #services { 
         .section-content {
-            img {
+
+            img, svg {
                 width: 25% !important;
             }
         }
