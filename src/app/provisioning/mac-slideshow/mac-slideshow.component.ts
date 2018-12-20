@@ -39,9 +39,9 @@ export class MacSlideshowComponent implements OnInit, OnDestroy {
 
   ngOnInit() {
     if (this.images.length > 1) {
-      setTimeout(() => {
-        this.startSlideshow();
-      }, this.startTimeout);
+      // setTimeout(() => {
+      //   this.startSlideshow();
+      // }, this.startTimeout);
     }
   }
 

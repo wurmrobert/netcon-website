@@ -120,10 +120,35 @@ section {
     }
 }
 
+.youtube-container {
+    height: 550px;
+    padding-top: 100px;
+    padding-bottom: 100px;
 
+
+    iframe {
+        margin: auto;
+        display: block;
+        height: 100%;
+        max-width: 978px;
+    }
+}
 
 
 @media screen and (max-width: $mobile-break-point) {
+    .youtube-container {
+        height: 100%;
+        padding-top: 100px;
+        padding-bottom: 100px;
+
+        iframe {
+            margin: auto;
+            display: block;
+            height: 70vh;
+            max-width: 70vh;
+        }
+    }
+
     section {
         .title {
             font-size: 18px;
