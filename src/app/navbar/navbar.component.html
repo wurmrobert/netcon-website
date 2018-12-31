@@ -5,7 +5,7 @@
             <img src="assets/netcon_logo.svg" class="logo-img" alt="logo">
         </li>
 
-        <li *ngFor="let tab of tabs" [class.active]="tab.id === activeSection" (click)="onNavigationItemClicked($event, tab)">
+        <li *ngFor="let tab of ( (displayDetector.getDeviceType() === displayType.Phone) ? tabs :  tabs.slice().reverse())" [class.active]="tab.id === activeSection" (click)="onNavigationItemClicked($event, tab)">
             <!-- <img src="{{ tab.id === activeSection ? tab.icon_active : tab.icon }}" class="tab-icon" alt="icon"> -->
             <a class="tab-a">{{ tab.title | translate }}</a> <!-- [routerLink]="tab.url" [fragment]="tab.id" -->
 

@@ -19,12 +19,11 @@ export class NavbarComponent implements OnInit, OnDestroy {
 
   tabs = [
     {
-      title: 'contact.title',
-      id: 'contact',
-      active: ['contact'],
-      icon: 'assets/icons/kontakt.svg',
-      icon_active: 'assets/icons/kontakt_active.svg',
-      url: ''
+      title: 'home.title',
+      id: 'home',
+      active: ['home'],
+      icon: 'assets/icons/home.svg',
+      icon_active: 'assets/icons/home_active.svg', url: ''
     },
     {
       title: 'services.title',
@@ -32,35 +31,7 @@ export class NavbarComponent implements OnInit, OnDestroy {
       active: ['services', 'provisioning'],
       icon: 'assets/icons/services.svg',
       icon_active: 'assets/icons/services_active.svg',
-      url: '',
-      sub: [
-        {
-          title: 'services.isp.title',
-          url: 'services/isp-services'
-        },
-        {
-          title: 'services.dev.title',
-          url: 'services/software-entwicklung'
-        },
-        {
-          title: 'services.consulting.title',
-          url: 'services/consulting'
-        }
-      ]
-    },
-    {
-      title: 'about_us.title',
-      id: 'about-us',
-      active: ['about-us'],
-      icon: 'assets/icons/aboutus.svg',
-      icon_active: 'assets/icons/aboutus_active.svg',
-      url: '',
-      sub: [
-        {
-          title: 'jobs.title',
-          url: 'unternehmen/jobs'
-        }
-      ]
+      url: ''
     },
     {
       title: '_general.partners',
@@ -71,11 +42,20 @@ export class NavbarComponent implements OnInit, OnDestroy {
       url: ''
     },
     {
-      title: 'home.title',
-      id: 'home',
-      active: ['home'],
-      icon: 'assets/icons/home.svg',
-      icon_active: 'assets/icons/home_active.svg', url: ''
+      title: 'about_us.title',
+      id: 'about-us',
+      active: ['about-us'],
+      icon: 'assets/icons/aboutus.svg',
+      icon_active: 'assets/icons/aboutus_active.svg',
+      url: ''
+    },
+    {
+      title: 'contact.title',
+      id: 'contact',
+      active: ['contact'],
+      icon: 'assets/icons/kontakt.svg',
+      icon_active: 'assets/icons/kontakt_active.svg',
+      url: ''
     }
 
   ];
@@ -106,11 +86,12 @@ export class NavbarComponent implements OnInit, OnDestroy {
     );
 
     const lang = navigator.language;
-    if (lang && lang.split('-') && lang.split('-').length > 0) {
-      this.translate.use(lang.split('-')[0].toLowerCase());
-    } else {
-      this.translate.use(this.translate.defaultLang);
-    }
+    // if (lang && lang.split('-') && lang.split('-').length > 0) {
+    //   this.translate.use(lang.split('-')[0].toLowerCase());
+    // } else {
+    //   this.translate.use(this.translate.defaultLang);
+    // }
+    this.translate.use('de');
   }
 
   ngOnInit() {
@@ -130,11 +111,8 @@ export class NavbarComponent implements OnInit, OnDestroy {
     let animation = false;
     if (!tab.sub || event.srcElement.className === 'tab-icon' || event.srcElement.className === 'tab-a') {
       animation = this.router.url.split('/').length <= 2;
-      if (this.displayDetector.getDeviceType() === DisplayType.Phone && tab.id === 'services') {
-        this.router.navigate(['services/isp-services']); // on mobile always to provisioning page
-      } else {
-        this.router.navigate([tab.url], { fragment: tab.id });
-      }
+      this.router.navigate([tab.url], { fragment: tab.id });
+      
       if (window.location.hash === `#${tab.id}`) {
         this.navbarService.scrollToHash(tab.id, false);
       }

@@ -3,7 +3,7 @@
 
 .footer-content {
     background-color: $gray-dark;
-    height: 336px;
+    height: 400px;
     padding-top: 40px;
     padding-bottom: 40px;
 
@@ -40,6 +40,7 @@ div[uk-grid] {
     border: solid 1px #ffffff;
     border-left: none;
     border-right: none;
+    border-top: none;
 
     img {
         height: 32px;
@@ -67,7 +68,18 @@ div[uk-grid] {
         text-align: center;
         // line-height: 1px;
         margin: 0;
-    }    
+    }
+
+    .img-wrapper {
+        display: flex;
+        margin-top: -20px;
+        margin-bottom: 20px;
+
+        .logo {
+            margin: auto;
+            height: 45px;
+        }
+    }
 }
 
 div {
@@ -76,6 +88,7 @@ div {
         border: none;
     }
 }
+
 
 
 

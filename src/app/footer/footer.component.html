@@ -3,40 +3,64 @@
     <div class="uk-container">
         <div class="main-header uk-child-width-expand@s uk-text-left" uk-grid>
             <div (click)="itemClicked('home')"><a [routerLink]="''" [fragment]="'home'">{{'home.title' | translate}}</a></div>
-            <div (click)="itemClicked('services')"><a [routerLink]="''" [fragment]="'services'">{{'services.title' | translate}}</a></div>
-            <div (click)="itemClicked('about-us')"><a [routerLink]="''" [fragment]="'about-us'">{{'about_us.title' | translate}}</a></div>
-            <div (click)="itemClicked('partner')"><a [routerLink]="''" [fragment]="'partner'">{{'_general.partners' | translate}}</a></div>
-            <div (click)="itemClicked('contact')"><a [routerLink]="''" [fragment]="'contact'">{{ 'contact.title' | translate }}</a></div>
+            <div (click)="itemClicked('services')"><a [routerLink]="''" [fragment]="'services'">{{'services.title' |
+                    translate}}</a></div>
+            <div (click)="itemClicked('about-us')"><a [routerLink]="''" [fragment]="'about-us'">{{'about_us.title' |
+                    translate}}</a></div>
+            <div (click)="itemClicked('partner')"><a [routerLink]="''" [fragment]="'partner'">{{'_general.partners' |
+                    translate}}</a></div>
+            <div (click)="itemClicked('contact')"><a [routerLink]="''" [fragment]="'contact'">{{ 'contact.title' |
+                    translate }}</a></div>
         </div>
         <div class="uk-child-width-expand@s uk-text-left" uk-grid>
             <div></div>
-            <div [routerLink]="'services/isp-services'"><a>{{'services.isp.title' | translate}}</a></div>
-            <div [routerLink]="'unternehmen/jobs'"><a>{{ 'jobs.title' | translate }}</a></div>
-            <div></div>
-            <div></div>
-        </div>
-        <div class="uk-child-width-expand@s uk-text-left" uk-grid>
-            <div></div>
-            <div [routerLink]="'services/software-entwicklung'"><a>{{'services.dev.title' | translate}}</a></div>
+            <div (click)="itemClicked('docsis')"><a [routerLink]="''" [fragment]="'docsis'">{{'DOCSIS' | translate}}</a></div>
             <div></div>
             <div></div>
             <div></div>
         </div>
         <div class="uk-child-width-expand@s uk-text-left" uk-grid>
             <div></div>
-            <div [routerLink]="'services/consulting'"><a>{{'services.consulting.title' | translate}}</a></div>
+            <div (click)="itemClicked('fiber')"><a [routerLink]="''" [fragment]="'fiber'">{{'FIBER' | translate}}</a></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="uk-child-width-expand@s uk-text-left" uk-grid>
+            <div></div>
+            <div (click)="itemClicked('fritzbox')"><a [routerLink]="''" [fragment]="'fritzbox'">{{'FRITZ!BOX' |
+                    translate}}</a></div>
             <div></div>
             <div></div>
             <div></div>
         </div>
 
+        <div class="uk-child-width-expand@s uk-text-left" uk-grid>
+            <div></div>
+            <div (click)="itemClicked('provisioning')"><a [routerLink]="''" [fragment]="'provisioning'" style="text-transform: uppercase">{{'_general.easyprovisioning'
+                    | translate}}</a></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+
+        <div class="uk-child-width-expand@s uk-text-left" uk-grid>
+            <div></div>
+            <div (click)="itemClicked('provisioning')"><a [href]="'https://www.fritzshop.at'" target="_blank">{{'ONLINE SHOP'
+                    | translate}}</a></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+
+
         <div class="social-media-content uk-container">
-            <div class="center">
+            <!-- <div class="center">
                 <a href="https://www.facebook.com/EasySolutions-GmbH-118361595511744"><img src="assets/icons/facebook.svg"
                         alt="facebook"></a>
                 <a href="https://www.linkedin.com/company/11284774/"><img src="assets/icons/linkedin.svg" alt="linkedin"
                         class="right"></a>
-            </div>
+            </div> -->
         </div>
 
         <div class="uk-child-width-expand@s uk-text-left" uk-grid>
@@ -51,8 +75,12 @@
     </div>
 
     <div class="copyright-content">
-        <p>© 2017 EasySolutions GmbH</p>
-        <p>Enterprise Software. Made in Austria</p>
+
+        <ngui-in-view class="img-wrapper">
+            <img *ngIf src="assets/home/netcon_white_footer.svg" class="logo">
+        </ngui-in-view>
+
+        <p>{{ '_general.footer_info' | translate }}</p>
     </div>
 
 </div>

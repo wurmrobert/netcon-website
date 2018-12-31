@@ -25,7 +25,10 @@ ul {
 li {
     cursor: pointer;
     float: right;
-    padding-top: 5px;
+    height: 48px;
+    margin-top: -10px;
+    padding-top: 17px;
+
 
     &.logo {
         padding-top: 0px;
@@ -35,8 +38,9 @@ li {
     }
 
     &.active {
+        background: $orange;
         a {
-            color: $orange;
+            color: white;
         }
     }
 
@@ -52,6 +56,7 @@ li a {
     padding: 5px 16px;
     text-decoration: none;
     font-size: 12px;
+    text-transform: uppercase;
 }
 
 .tab-icon {
@@ -192,6 +197,17 @@ li a {
             li {
                 img {
                     display: none;
+                }
+
+                a {
+                    margin-top: -7px;
+                }
+                
+                &.active {
+                    background: white;
+                    a {
+                        color: $orange;
+                    }
                 }
             }
         }
