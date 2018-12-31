@@ -1,6 +1,6 @@
 {
 	"Unsere": "Our",
-	"_general.easyprovisioning": "Easy.Provisioning",
+	"_general.easyprovisioning": "Provisioning",
 	"_general.easysolutions": "EasySolutions GmbH",
 	"_general.footer_info": "© 2017 EasySolutions GmbH - Enterprise Software. Made in Austria",
 	"_general.lang.de": "DE",
@@ -11,6 +11,7 @@
 	"_general.our_partners": "Our partners",
 	"_general.partners": "Partners",
 	"_general.references": "Partner",
+	"_general.fritzshop": "Zum Fritz Shop",
 	"about_us.charac.allround.descr": "We are experienced in different fields of modern software development. Upon client’s request, individual adjustments and interfaces can be customized.",
 	"about_us.charac.allround.title": "Versatile",
 	"about_us.charac.customer_oriented.descr": "We develop software using intelligent algorithms, which align with our clients’ and partners’ needs to ensure the best operability and the simplest usage.",
@@ -124,10 +125,17 @@
 	"services.hardware.subtitle": "Nullesenimet, tes ma del molest est, officatur reE- dipsumquunt am autatis",
 	"services.hardware.title": "Hardware",
 
+	"services.docsis.descr2": "Gleichzeitug bieten neue Technologien den Aufbau von dezentralen Systemen (D-CCAP) und einen schrittweisen Umstieg von DOCSIS 3.0 auf 3.1.",
+	"services.docsis.descr1": "Die immer weiter entwickelte Übergangstechnologie von Daten über das bestehende Kabelnetzwerk ermöglicht Breitbandzugänge kostengünstig über die vorhandene Infrastruktur anzubieten. In der neuesten Version des DOCSIS Standard kännen Bandbreiten von mehreren Gigabit erreicht werden.",
 	"services.docsis.subtitle": "Bandbreiten von mehreren Gigabit über Ihre vorhandene Infrastruktur",
 	"services.docsis.title": "DOCSIS",
+
+	"services.fiber.descr1": "Die Datenübertragung auf Glasfaser Leitungen ist die Technologie die den heutigen und zukünftigen Ansprüchen an Qualität und Bandbreite gerecht wird. Gemeinsam mit unseren führenden Hard- und Software Partnern im jeweiligen Segment können wir für sämtliche Anforderungen an die aktive Access- und Backbone Infrastruktur eine ideale und effiziente Lösung anbieten.",	
 	"services.fiber.subtitle": "Bandbreiten von mehreren Gigabit über Ihre vorhandene Infrastruktur",
 	"services.fiber.title": "FIBER",
+	
+	"services.fritzbox.descr2": "Alle AVM-Produkte können im Online-Shop bestellt werden.",
+	"services.fritzbox.descr1": "Durch die System-Partnerschaft mit AVM kann eine breite Palette von DOCSIS-, FTTx- und DSL-Endgeräten angeboten werden. Zusätzlich bietet AVM ein großes Angebot an Zubehör, wie WLAN-Repeater, Powerline- Adapter, DECT-Telefone uvm.",
 	"services.fritzbox.subtitle": "Bandbreiten von mehreren Gigabit über Ihre vorhandene Infrastruktur",
 	"services.fritzbox.title": "FRITZ!BOX",
 

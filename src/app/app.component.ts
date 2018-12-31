@@ -43,7 +43,7 @@ export class AppComponent implements AfterViewInit {
 
 
     // this language will be used as a fallback when a translation isn't found in the current language
-    translate.setDefaultLang('en');
+    translate.setDefaultLang('de');
 
   }
 

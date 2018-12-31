@@ -158,28 +158,26 @@
 <section appNavSection id="docsis" class="dark-bkgr">
   <div class="uk-container">
     <p class="title rubik-bold uppercase">{{'services.docsis.title' | translate}}</p>
-    <hr [style.max-width]="'122px'">
+    <hr [style.max-width]="'130px'">
 
     <div class="section-content uk-child-width-expand@s" uk-grid>
       <div [class.col]="!mobileMode" [class.uk-padding]="!mobileMode">
 
         <p class="descr">
-          {{ 'services.isp.descr1' | translate }}
-          {{ 'services.isp.descr2' | translate }}
+          {{ 'services.docsis.descr1' | translate }}
+          <br>
+          <br>
+          {{ 'services.docsis.descr2' | translate }}
         </p>
       </div>
 
-      <div class="cloud-col" [class.col]="!mobileMode" [class.uk-padding]="!mobileMode">
-        <ngui-in-view class="img-wrapper">
+      <div class="product-col" [class.col]="!mobileMode" [class.uk-padding]="!mobileMode">
+        <ngui-in-view class="img-wrapper" #wrapper>
           <img *ngIf src="assets/home/docsis.png">
         </ngui-in-view>
-        
-        <div class="huawei-docsis-img"></div>
 
+        <div *ngIf="wrapper.inView" class="huawei-docsis-img"></div>
 
-        <!-- <ngui-in-view>
-            <img *ngIf src="assets/home/huawei_docsis.svg">
-          </ngui-in-view> -->
       </div>
     </div>
 
@@ -187,53 +185,194 @@
 </section>
 
 
-<section appNavSection id="provisioning" class="dark polygon-XXxx">
+
+<section appNavSection id="fiber" class="light-bkgr">
   <div class="uk-container">
-    <p class="title bold">{{'_general.easyprovisioning' | translate}}</p>
-    <hr>
+
+
+    <p class="title right rubik-bold uppercase">{{'services.fiber.title' | translate}}</p>
+    <hr class="right">
+    <hr class="right overlay-hr" [style.max-width]="'calc(100% - 140px)'">
+
+
+
+
+    <div class="section-content uk-child-width-expand@s" uk-grid>
+
+
+
+      <div class="product-col" [class.col]="!mobileMode" [class.uk-padding]="!mobileMode">
+        <ngui-in-view class="img-wrapper" #wrapper>
+          <img *ngIf src="assets/home/huawei_s5700.png">
+        </ngui-in-view>
+        <div *ngIf="wrapper.inView" class="huawei_s5700-img"></div>
+
+
+        <ngui-in-view class="img-wrapper huawei-gpon" #wrapper2>
+          <img *ngIf src="assets/home/huawei_gpon.png">
+        </ngui-in-view>
+        <div *ngIf="wrapper2.inView" class="huawei_gpon-img"></div>
+
+
+      </div>
+
+      <div [class.col]="!mobileMode" [class.uk-padding]="!mobileMode" style="padding-right: 0">
+
+        <ul class="feature-list extra-bold">
+          <li><span>PTP ETHERNET</span></li>
+          <li><span>GPON</span></li>
+        </ul>
+
+        <p class="descr">
+          {{ 'services.fiber.descr1' | translate }}
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+
+
+<section appNavSection id="fritzbox" class="dark-bkgr">
+  <div class="uk-container">
+    <p class="title rubik-bold uppercase">{{'services.fritzbox.title' | translate}}</p>
+    <hr [style.max-width]="'180px'">
 
     <div class="section-content uk-child-width-expand@s" uk-grid>
       <div [class.col]="!mobileMode" [class.uk-padding]="!mobileMode">
-        <p class="title extra-bold">{{'services.isp.acs-software' | translate}}</p>
-        <p class="subtitle bold">{{ 'services.isp.side_title' | translate }}</p>
+
+        <p class="descr">
+          {{ 'services.fritzbox.descr1' | translate }}
+          <br>
+          <br>
+          {{ 'services.fritzbox.descr2' | translate }}
+        </p>
+
+
+
+        <div class="more-content">
+          <a class="fritz-btn rubik-light" [href]="'https://www.fritzshop.at'" target="_blank">
+            {{ '_general.fritzshop' | translate }}
+          </a>
+        </div>
+
+      </div>
+
+      <div class="product-col" [class.col]="!mobileMode" [class.uk-padding]="!mobileMode">
+        <ngui-in-view class="img-wrapper" #wrapper>
+          <img *ngIf src="assets/home/fritzbox.png">
+        </ngui-in-view>
+
+        <div *ngIf="wrapper.inView" class="fritz6490-img"></div>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+
+
+<section appNavSection id="provisioning" class="light-bkgr">
+  <div class="uk-container">
+
+
+    <p class="title right rubik-bold uppercase">{{'_general.easyprovisioning' | translate}}</p>
+    <hr class="right">
+    <hr class="right overlay-hr" [style.max-width]="'calc(100% - 355px)'">
+
+
+
+
+    <div class="section-content uk-child-width-expand@s" uk-grid>
+
+
+
+      <div class="product-col" [class.col]="!mobileMode" [class.uk-padding]="!mobileMode">
+        <ngui-in-view class="img-wrapper" #wrapper>
+          <img *ngIf src="assets/home/Clud_orange.png">
+        </ngui-in-view>
+
+
+        <div class="section-content uk-child-width-expand@s" uk-grid style="margin-top: 20px">
+
+          <ul class="feature-list">
+            <li><span>{{'services.isp.easyprov.provisioning.feature1' | translate}}</span></li>
+            <li><span>{{'services.isp.easyprov.provisioning.feature2' | translate}}</span></li>
+            <li><span>{{'services.isp.easyprov.provisioning.feature3' | translate}}</span></li>
+            <li><span>{{'services.isp.easyprov.provisioning.feature4' | translate}}</span></li>
+          </ul>
+
+          <ul class="feature-list">
+            <li><span>{{'services.isp.easyprov.ip.feature1' | translate}}</span></li>
+            <li><span>{{'services.isp.easyprov.ip.feature2' | translate}}</span></li>
+            <li><span>{{'services.isp.easyprov.ip.feature3' | translate}}</span></li>
+            <li><span>{{'services.isp.easyprov.ip.feature4' | translate}}</span></li>
+          </ul>
+
+        </div>
+
+
+        <div class="section-content uk-child-width-expand@s" uk-grid style="margin-top: -20px">
+
+
+          <ul class="feature-list">
+            <li><span>{{'services.isp.screenshot_titles.monitoring' | translate}}</span></li>
+            <li><span>{{'services.isp.screenshot_titles.ip_management' | translate}}</span></li>
+            <li><span>{{'services.isp.easyprov.monitoring.feature3' | translate}}</span></li>
+            <li><span>{{'services.isp.easyprov.management.feature4' | translate}}</span></li>
+          </ul>
+
+          <ul class="feature-list">
+            <li><span>{{'services.isp.easyprov.management.feature1' | translate}}</span></li>
+            <li><span>{{'services.isp.easyprov.management.feature2' | translate}}</span></li>
+            <li><span>{{'services.isp.easyprov.management.feature3' | translate}}</span></li>
+            <li><span>{{'services.isp.easyprov.management.feature4' | translate}}</span></li>
+          </ul>
+
+
+        </div>
+
+        <div class="more-content">
+          <a class="fritz-btn rubik-light" [href]="'https://easysol.at/services/isp-services'" target="_blank">
+            {{ '_general.more' | translate }}
+          </a>
+        </div>
+
+
+      </div>
+
+      <div [class.col]="!mobileMode" [class.uk-padding]="!mobileMode" style="padding-right: 0">
+
+
 
         <p class="descr">
           {{ 'services.isp.descr1' | translate }}
           {{ 'services.isp.descr2' | translate }}
+
+          {{ 'services.isp.descr1' | translate }}
+          {{ 'services.isp.descr2' | translate }}
         </p>
+
+
       </div>
 
-      <div class="cloud-col" [class.col]="!mobileMode" [class.uk-padding]="!mobileMode">
-        <ngui-in-view class="cloud-img-wrapper">
-          <img *ngIf src="assets/home/provisioning_cloud_white.svg">
-        </ngui-in-view>
-      </div>
     </div>
-
-    <div class="more-content">
-      <button type="button" class="round-btn gray" (click)="navigateTo('services/isp-services')">
-        {{'_general.more' | translate}}
-      </button>
-    </div>
-
 
 
 
   </div>
+
+
 </section>
 
 
 
-<!-- <div class="youtube-container">
-  
-  <iframe src="https://www.youtube.com/embed/pBAn83-h9lA?autoplay=1&amp;mute=0&amp;showinfo=0&amp;rel=0&amp;modestbranding=1&amp;playsinline=1"
-  [width]="'100%'" frameborder="0" allowfullscreen controls playsinline
-  wm-mode="transparent"
-  allow="autoplay" 
-  uk-video="automute: true"
-  ></iframe>
 
-</div> -->
 
 
 <section appNavSection id="about-us">

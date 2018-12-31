@@ -66,6 +66,12 @@ section {
         padding-left: 20px;
         line-height: 0;
         margin-top: 80px;
+
+        &.right {
+            text-align: right;
+            padding-right: 20px;
+
+        }
     }
 
     hr {
@@ -74,6 +80,10 @@ section {
         background-color: $orange;
         border: none;
         margin-left: 20px;
+
+        &.right {
+            margin-right: 20px;
+        }
     }
 
     .section-content {
@@ -95,6 +105,7 @@ section {
     .descr {
         font-size: 16px;
         font-weight: 400;
+        text-align: justify;
     }
 }
 
@@ -125,6 +136,10 @@ section {
 
     &.dark-bkgr {
         background-color: $gray-lighter;
+    }
+
+    &.light-bkgr {
+        background-color: white;
     }
 }
 
