@@ -9,6 +9,11 @@
     src: url('/assets/fonts/Rubik/Rubik-Medium.ttf');
 }
 
+@font-face {
+    font-family: 'Rubik-Bold';
+    src: url('/assets/fonts/Rubik/Rubik-Bold.ttf');
+}
+
 
 
 body {
@@ -39,11 +44,32 @@ body {
 
 .rubik-light {
    font-family: "Rubik-Light";
+   
+   &.uppercase {
+    letter-spacing: 2px;
+    text-transform: uppercase;
+   }
 }
 
 .rubik-medium {
     font-family: "Rubik-Medium";
- }
+    letter-spacing: 2px;
+
+    &.uppercase {
+        letter-spacing: 2px;
+        text-transform: uppercase;
+    }
+}
+
+.rubik-bold {
+    font-family: "Rubik-Bold";
+    letter-spacing: 2px;
+
+    &.uppercase {
+        letter-spacing: 2px;
+        text-transform: uppercase;
+    }
+}
 
 
 

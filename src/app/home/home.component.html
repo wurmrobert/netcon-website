@@ -10,17 +10,58 @@
     </div>
 
     <div class="head-line">
-        <p class="your-partner rubik-light">{{ 'home.headline.yourpartner' | translate}}</p>
-        <p class="network-solutions rubik-light">{{ 'home.headline.networksolutions' | translate}}</p>
-        <p class="read-more rubik-light" [routerLink]="''" [fragment]="'provisioning'">{{ '_general.readmore' | translate}}</p>
-    
+      <p class="your-partner rubik-light uppercase">{{ 'home.headline.yourpartner' | translate}}</p>
+      <p class="network-solutions rubik-light uppercase">{{ 'home.headline.networksolutions' | translate}}</p>
+      <p class="read-more rubik-light uppercase" [routerLink]="''" [fragment]="'services'">{{ '_general.readmore' |
+        translate}}</p>
+
     </div>
-    
+
   </div>
 
-  <img src="assets/home/gray-half-bottom.svg">
+
+</div>
+
+<div class="start-icons-container">
+  <img src="assets/home/backround_icons.svg" class="backround-icons">
+
+  <div class="uk-container">
 
 
+    <div class="section-content uk-child-width-expand@s uk-text-center" uk-grid>
+
+      <!-- software -->
+      <div class="col uk-padding left">
+        <img src="assets/home/icon_software.svg" alt="software">
+
+        <p class="service-title rubik-medium">{{'services.software.title' | translate}}</p>
+        <p class="service-subtitle rubik-light">{{ 'services.software.subtitle' | translate }}</p>
+      </div>
+
+
+
+
+      <!-- hardware -->
+      <div class="col uk-padding center">
+        <img src="assets/home/icon_hardware.svg" alt="hardware">
+
+        <p class="service-title rubik-medium">{{'services.hardware.title' | translate}}</p>
+        <p class="service-subtitle rubik-light">{{ 'services.hardware.subtitle' | translate }}</p>
+      </div>
+
+
+
+      <!-- consulting -->
+      <div class="col uk-padding right">
+        <img src="assets/home/icon_consulting.svg" alt="consulting">
+
+        <p class="service-title rubik-medium">{{'services.consulting.title' | translate}}</p>
+        <p class="service-subtitle rubik-light">{{ 'services.consulting.subtitle' | translate }}</p>
+      </div>
+
+    </div>
+
+  </div>
 </div>
 
 
@@ -29,38 +70,51 @@
   <div class="uk-container">
 
 
-    <p class="title bold">{{'services.title' | translate}}</p>
-    <hr>
+    <!-- <p class="title bold">{{'services.title' | translate}}</p>
+    <hr> -->
+
+    <div class="services-container">
+
+      <!-- docsis -->
+      <div class="service docsis">
+        <p class="service-title rubik-bold uppercase">{{'services.docsis.title' | translate}}</p>
+        <p class="service-subtitle rubik-light">{{ 'services.docsis.subtitle' | translate }}</p>
+
+        <div class="more-btn rubik-light uppercase" [routerLink]="''" [fragment]="'services'"><p>{{ '_general.more_short' | translate }}</p></div>
+      </div>
+
+
+      <!-- docsis -->
+      <div class="service fiber">
+        <p class="service-title rubik-bold uppercase">{{'services.fiber.title' | translate}}</p>
+        <p class="service-subtitle rubik-light">{{ 'services.fiber.subtitle' | translate }}</p>
+        
+        <div class="more-btn rubik-light uppercase" [routerLink]="''" [fragment]="'services'"><p>{{ '_general.more_short' | translate }}</p></div>      
+      </div>
+
+      <!-- docsis -->
+      <div class="service fritzbox">
+        <p class="service-title rubik-bold uppercase">{{'services.fritzbox.title' | translate}}</p>
+        <p class="service-subtitle rubik-light">{{ 'services.fritzbox.subtitle' | translate }}</p>
+      
+        <div class="more-btn rubik-light uppercase" [routerLink]="''" [fragment]="'services'"><p>{{ '_general.more_short' | translate }}</p></div>
+      </div>
+
+
+    </div>
+
+
+
+
+
+
 
     <div class="section-content uk-child-width-expand@s uk-text-center" uk-grid uk-scrollspy="target: > div; cls:uk-animation-fade; delay: 300">
 
-      <div class="col uk-padding">
-        <img src="assets/home/software_entwicklung.svg" alt="easy provisioning" (click)="navigateTo('services/isp-services')">
 
 
-        <p class="service-title semi-bold">{{'services.dev.title' | translate}}</p>
-        <p class="service-subtitle">{{ 'services.dev.subtitle' | translate }}</p>
-      </div>
 
 
-      <div class="col uk-padding">
-
-        <img src="assets/home/easy_provisioning.svg" alt="easy provisioning" (click)="navigateTo('services/isp-services')">
-
-
-        <p class="service-title semi-bold">{{'_general.easyprovisioning' | translate}}</p>
-        <p class="service-subtitle">{{ 'services.isp.subtitle' | translate }}</p>
-      </div>
-
-
-      <div class="col uk-padding">
-        
-        <img  src="assets/home/consulting.svg" alt="consulting" (click)="navigateTo('services/consulting')">
-
-
-        <p class="service-title semi-bold">{{'services.consulting.title' | translate}}</p>
-        <p class="service-subtitle">{{'services.consulting.subtitle' | translate}}</p>
-      </div>
 
     </div>
     <div class="scroll-down-content">
@@ -127,7 +181,7 @@
       </button>
     </div>
 
-    
+
 
 
   </div>
@@ -338,7 +392,7 @@
               <div class="uk-position-center uk-panel"></div>
             </li> -->
 
-            
+
 
             <li>
               <ngui-in-view>
@@ -361,7 +415,7 @@
               <div class="uk-position-center uk-panel"></div>
             </li>
 
-            
+
 
             <!-- <li>
               <ngui-in-view>
