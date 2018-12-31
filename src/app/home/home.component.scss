@@ -71,6 +71,11 @@
 
 
 .start-icons-container {
+
+    &.home-img-not-loaded {
+        opacity: 0;
+    }
+
     .backround-icons{
         position: absolute;
         z-index: -1;
@@ -242,6 +247,36 @@
     }
 }
 
+
+#docsis {
+    margin-top: 100px;
+    .title {
+        text-align: left;
+        padding-left: 25px;
+    }
+
+    .img-wrapper {
+            
+        width: calc(100% - 40px);
+        height: 0;
+        margin-left: 50px;
+        position: relative;
+
+        img {
+            width: 100%;
+            position: absolute;
+        }
+    }
+
+    .huawei-docsis-img {
+        margin-left: 50px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-image: url("/assets/home/huawei_docsis.svg");
+        margin-top: 140px;
+        height: 50px;
+    }
+}
 
 
 #provisioning {

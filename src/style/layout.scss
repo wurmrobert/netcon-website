@@ -61,22 +61,26 @@ section {
 
 
     .title {
-        text-align: center;
+        text-align: left;
         font-size: 30px;
+        padding-left: 20px;
+        line-height: 0;
+        margin-top: 80px;
     }
 
     hr {
-        max-width: 40px;
-        height: 2px;
-        color: $gray-light;
-        background-color: $gray-light;
+        height: 7px;
+        color: $orange;
+        background-color: $orange;
         border: none;
-        margin: auto;
+        margin-left: 20px;
     }
 
     .section-content {
-        margin-top: 25px;
         padding: 25px;
+
+        margin-top: 0;
+        padding-top: 0;
 
         .title {
             font-size: 30px;
@@ -117,6 +121,10 @@ section {
     &.polygon-xXXX {
         -webkit-clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 100%);
         clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 100%);
+    }
+
+    &.dark-bkgr {
+        background-color: $gray-lighter;
     }
 }
 

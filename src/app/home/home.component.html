@@ -22,7 +22,7 @@
 
 </div>
 
-<div class="start-icons-container">
+<div class="start-icons-container" [class.home-img-not-loaded]="!homeImgLoaded">
   <img src="assets/home/backround_icons.svg" class="backround-icons">
 
   <div class="uk-container">
@@ -80,24 +80,30 @@
         <p class="service-title rubik-bold uppercase">{{'services.docsis.title' | translate}}</p>
         <p class="service-subtitle rubik-light">{{ 'services.docsis.subtitle' | translate }}</p>
 
-        <div class="more-btn rubik-light uppercase" [routerLink]="''" [fragment]="'services'"><p>{{ '_general.more_short' | translate }}</p></div>
+        <div class="more-btn rubik-light uppercase" [routerLink]="''" [fragment]="'docsis'">
+          <p>{{ '_general.more_short' | translate }}</p>
+        </div>
       </div>
 
 
-      <!-- docsis -->
+      <!-- fiber -->
       <div class="service fiber">
         <p class="service-title rubik-bold uppercase">{{'services.fiber.title' | translate}}</p>
         <p class="service-subtitle rubik-light">{{ 'services.fiber.subtitle' | translate }}</p>
-        
-        <div class="more-btn rubik-light uppercase" [routerLink]="''" [fragment]="'services'"><p>{{ '_general.more_short' | translate }}</p></div>      
+
+        <div class="more-btn rubik-light uppercase" [routerLink]="''" [fragment]="'fiber'">
+          <p>{{ '_general.more_short' | translate }}</p>
+        </div>
       </div>
 
-      <!-- docsis -->
+      <!-- fritzbox -->
       <div class="service fritzbox">
         <p class="service-title rubik-bold uppercase">{{'services.fritzbox.title' | translate}}</p>
         <p class="service-subtitle rubik-light">{{ 'services.fritzbox.subtitle' | translate }}</p>
-      
-        <div class="more-btn rubik-light uppercase" [routerLink]="''" [fragment]="'services'"><p>{{ '_general.more_short' | translate }}</p></div>
+
+        <div class="more-btn rubik-light uppercase" [routerLink]="''" [fragment]="'fritzbox'">
+          <p>{{ '_general.more_short' | translate }}</p>
+        </div>
       </div>
 
 
@@ -149,7 +155,36 @@
 </section>
 
 
+<section appNavSection id="docsis" class="dark-bkgr">
+  <div class="uk-container">
+    <p class="title rubik-bold uppercase">{{'services.docsis.title' | translate}}</p>
+    <hr [style.max-width]="'122px'">
 
+    <div class="section-content uk-child-width-expand@s" uk-grid>
+      <div [class.col]="!mobileMode" [class.uk-padding]="!mobileMode">
+
+        <p class="descr">
+          {{ 'services.isp.descr1' | translate }}
+          {{ 'services.isp.descr2' | translate }}
+        </p>
+      </div>
+
+      <div class="cloud-col" [class.col]="!mobileMode" [class.uk-padding]="!mobileMode">
+        <ngui-in-view class="img-wrapper">
+          <img *ngIf src="assets/home/docsis.png">
+        </ngui-in-view>
+        
+        <div class="huawei-docsis-img"></div>
+
+
+        <!-- <ngui-in-view>
+            <img *ngIf src="assets/home/huawei_docsis.svg">
+          </ngui-in-view> -->
+      </div>
+    </div>
+
+  </div>
+</section>
 
 
 <section appNavSection id="provisioning" class="dark polygon-XXxx">
