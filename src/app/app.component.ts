@@ -27,17 +27,17 @@ export class AppComponent implements AfterViewInit {
   ) {
     this.router.events.subscribe(event => {
       if (event instanceof NavigationEnd) {
-        setTimeout(() => {
-          try {
-            if (ga) {
-              ga('set', 'page', event.url);
-              ga('send', 'pageview');
-              ga('set', 'anonymizeIp', true);
-            }
-          } catch (ex) {
-            console.error('google analytics: ', ex);
-          }
-        }, 1000);
+        // setTimeout(() => {
+        //   try {
+        //     if (ga) {
+        //       ga('set', 'page', event.url);
+        //       ga('send', 'pageview');
+        //       ga('set', 'anonymizeIp', true);
+        //     }
+        //   } catch (ex) {
+        //     console.error('google analytics: ', ex);
+        //   }
+        // }, 1000);
       }
     });
 

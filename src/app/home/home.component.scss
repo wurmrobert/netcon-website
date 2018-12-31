@@ -6,14 +6,43 @@
 }
 
 .home-img-content {
-    p {
+
+    .head-line {
+        color: white;
         width: 500px;
         margin-left: calc((100vw - 500px) /2);
         position: absolute;
         text-align: center;
-        margin-top: -28vw;
-        font-size: 45px;
+        margin-top: -30vw;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+
+        .your-partner {
+            font-size: 12px;
+            font-weight: 100;
+            opacity: 0.7;
+        }
+
+        .network-solutions {
+            font-size: 50px;
+            line-height: 1;
+        }
+
+        .read-more {
+            margin-top: 25px;
+            font-size: 16px;
+            font-weight: 100;
+            opacity: 0.7;
+            border: solid 1px white;
+            border-radius: 10px;
+            padding: 10px;
+            position: initial;
+            margin: auto;
+            width: 200px;
+            cursor: pointer;
+        }
     }
+    
 
     // http://andyshora.com/css-image-container-padding-hack.html
     .home-img-wrapper {
@@ -21,7 +50,7 @@
         height: 0;
         padding-bottom: #{((740 / 1366) *100%)}; // img is: 1366x970
         //border: 2px solid red;
-        background-color: $gray-lighter;
+        background-color: #fafafa;
         position: relative;
 
         img {

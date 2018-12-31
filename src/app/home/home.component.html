@@ -1,17 +1,25 @@
 <div appNavSection id="home" class="home-content">
 
 
-
   <div class="home-img-content">
     <div class="home-img-wrapper">
-      <img src="assets/home/Home_Screen.png" (load)="onLoadHomeEnded()" [class.loaded]="homeImgLoaded">
+      <img src="assets/home/startseite.png" (load)="onLoadHomeEnded()" [class.loaded]="homeImgLoaded">
     </div>
     <div class="home-img-loader">
       <easy-loading-spinner [showSpinner]="!homeImgLoaded" [title]="''"></easy-loading-spinner>
     </div>
-    <p typingAnimation [typeSpeed]="headlineTypeSpeed" [startDelay]="0" *ngIf="showHeaderText" class="monserat-extra-bold">{{headerTexts[currentHeaderIndex]
-      | translate}}</p>
+
+    <div class="head-line">
+        <p class="your-partner rubik-light">{{ 'home.headline.yourpartner' | translate}}</p>
+        <p class="network-solutions rubik-light">{{ 'home.headline.networksolutions' | translate}}</p>
+        <p class="read-more rubik-light" [routerLink]="''" [fragment]="'provisioning'">{{ '_general.readmore' | translate}}</p>
+    
+    </div>
+    
   </div>
+
+  <img src="assets/home/gray-half-bottom.svg">
+
 
 </div>
 
@@ -127,7 +135,7 @@
 
 
 
-<div class="youtube-container">
+<!-- <div class="youtube-container">
   
   <iframe src="https://www.youtube.com/embed/pBAn83-h9lA?autoplay=1&amp;mute=0&amp;showinfo=0&amp;rel=0&amp;modestbranding=1&amp;playsinline=1"
   [width]="'100%'" frameborder="0" allowfullscreen controls playsinline
@@ -136,7 +144,7 @@
   uk-video="automute: true"
   ></iframe>
 
-</div>
+</div> -->
 
 
 <section appNavSection id="about-us">

@@ -10,17 +10,6 @@ import { Component, OnInit, AfterViewInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit, AfterViewInit {
 
-  showHeaderText = true;
-  currentHeaderIndex = 0;
-  headlineTypeSpeed = 0;
-
-  headerTexts = [
-    'home.headline1',
-    'home.headline2',
-    'home.headline4',
-    'home.headline3'
-  ];
-
   skills = {
     Unsere: [
       {
@@ -130,9 +119,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
     this.navbarService.activePage = 'home';
   }
 
-  ngOnInit() {
-    
-  }
+  ngOnInit() { }
 
   ngAfterViewInit() {
     setTimeout(() => {
@@ -143,10 +130,6 @@ export class HomeComponent implements OnInit, AfterViewInit {
         }
       }
     }, 300);
-
-    setTimeout(() => {
-      this.headlineTypeSpeed = 65;
-    }, 1000);
   }
 
   get mobileMode(): boolean {
@@ -181,26 +164,5 @@ export class HomeComponent implements OnInit, AfterViewInit {
     setTimeout(() => {
       this.homeImgLoaded = true;
     }, 500);
-
-    setTimeout(() => {
-      this.startHeadlineShow();
-    }, 1000);
-  }
-
-  private startHeadlineShow() {
-    // this.currentHeaderIndex = 1;
-
-    setInterval(() => {
-      this.showHeaderText = false;
-      if (this.currentHeaderIndex >= this.headerTexts.length - 1) {
-        this.currentHeaderIndex = 0;
-      } else {
-        this.currentHeaderIndex ++;
-      }
-      setTimeout(() => {
-        this.showHeaderText = true;
-      }, 100);
-      // console.log('headerTexts: ', this.headerTexts[this.currentHeaderIndex]);
-    }, 6000);
   }
 }

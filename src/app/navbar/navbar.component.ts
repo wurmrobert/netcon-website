@@ -19,11 +19,12 @@ export class NavbarComponent implements OnInit, OnDestroy {
 
   tabs = [
     {
-      title: 'home.title',
-      id: 'home',
-      active: ['home'],
-      icon: 'assets/icons/home.svg',
-      icon_active: 'assets/icons/home_active.svg', url: ''
+      title: 'contact.title',
+      id: 'contact',
+      active: ['contact'],
+      icon: 'assets/icons/kontakt.svg',
+      icon_active: 'assets/icons/kontakt_active.svg',
+      url: ''
     },
     {
       title: 'services.title',
@@ -70,13 +71,12 @@ export class NavbarComponent implements OnInit, OnDestroy {
       url: ''
     },
     {
-      title: 'contact.title',
-      id: 'contact',
-      active: ['contact'],
-      icon: 'assets/icons/kontakt.svg',
-      icon_active: 'assets/icons/kontakt_active.svg',
-      url: ''
-    },
+      title: 'home.title',
+      id: 'home',
+      active: ['home'],
+      icon: 'assets/icons/home.svg',
+      icon_active: 'assets/icons/home_active.svg', url: ''
+    }
 
   ];
 

@@ -8,7 +8,7 @@ nav {
     top: 0;
     width: 100%;
 
-    background-color: rgba($gray-dark, .8);
+    background-color: white;
     height: 65px;
 }
 
@@ -24,11 +24,14 @@ ul {
 
 li {
     cursor: pointer;
-    float: left;
+    float: right;
     padding-top: 5px;
 
     &.logo {
-        float: right;
+        padding-top: 0px;
+        margin-top: -7px;
+        padding-left: 20px;
+        float: left;
     }
 
     &.active {
@@ -44,7 +47,7 @@ li {
 
 li a {
     display: block;
-    color: white;
+    color: $gray-dark;
     text-align: center;
     padding: 5px 16px;
     text-decoration: none;

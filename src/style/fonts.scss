@@ -1,23 +1,13 @@
 
-// @font-face {
-//     font-family: 'Montserrat-Light';
-//     src: url('/assets/fonts/Montserrat/Montserrat-Light.ttf');
-// }
-
 @font-face {
-    font-family: 'Montserrat-ExtraBold';
-    src: url('/assets/fonts/Montserrat/Montserrat-ExtraBold.ttf');
+    font-family: 'Rubik-Light';
+    src: url('/assets/fonts/Rubik/Rubik-Light.ttf');
 }
 
-// @font-face {
-//     font-family: 'Montserrat-Bold';
-//     src: url('/assets/fonts/Montserrat/Montserrat-Bold.ttf');
-// }
-
-// @font-face {
-//     font-family: 'Montserrat-SemiBold';
-//     src: url('/assets/fonts/Montserrat/Montserrat-Bold.ttf');
-// }
+@font-face {
+    font-family: 'Rubik-Medium';
+    src: url('/assets/fonts/Rubik/Rubik-Medium.ttf');
+}
 
 
 
@@ -26,9 +16,7 @@ body {
     font-weight: 400;
 }
 
-.monserat-extra-bold {
-    font-family: "Montserrat-ExtraBold";
-}
+
 .extra-bold {
     // font-family: "Montserrat-ExtraBold";
     font-weight: 800;
@@ -49,20 +37,15 @@ body {
 
 }
 
-.light {
-    font-weight: 300;
-   // font-family: "Montserrat-Light";
-   font-family: "SF Pro Text", "SF Pro Icons", "Helvetica Neue", Helvetica, Arial, sans-serif;
-
+.rubik-light {
+   font-family: "Rubik-Light";
 }
 
+.rubik-medium {
+    font-family: "Rubik-Medium";
+ }
 
-.semi-bold {
-    font-weight: 700;
-    // font-family: "Montserrat-SemiBold";
-    font-family: "SF Pro Text", "SF Pro Icons", "Helvetica Neue", Helvetica, Arial, sans-serif;
 
-}
 
 .uk-h1, .uk-h2, .uk-h3, .uk-h4, .uk-h5, .uk-h6, h1, h2, h3, h4, h5, h6 {
     font-weight: 600;
