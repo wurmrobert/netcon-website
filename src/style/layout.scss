@@ -3,7 +3,10 @@
 @import 'src/style/colors';
 @import 'src/style/mobile';
 
-
+html {
+    overflow-x: hidden;
+    max-width: 100vw;
+}
 
 body {
     color: $gray-dark
